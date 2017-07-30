@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="js数组是由为任意类型的元素组成的有序集合，元素的索引从0开始。其最大索引为 4294967294，数组大小变化时不需要重新分配空间。 ##创建数组123var arr = [];//var arr = new Array();var arr = [1,2];//arr.length为2var arr = [1,,2];//arr.length为3，稀疏数组包含undefind元素 ##元素元素的">
+<meta name="description" content="字符串有length属性，返回字符串长度字符串和数组类似的方法有：concat, slice, split, indexOf, lastIndexOf,  常用字符串方法(都不改变原始字符串)toLowerCase()和toUpperCase 大小写转换12345var str = &apos;I Love you&apos;;var a = str.toLowerCase();var b = str.toUpper">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javaScript基础——数组">
-<meta property="og:url" content="http://yoursite.com/javaScript基础——数组/index.html">
+<meta property="og:title" content="字符串方法">
+<meta property="og:url" content="http://yoursite.com/字符串方法/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="js数组是由为任意类型的元素组成的有序集合，元素的索引从0开始。其最大索引为 4294967294，数组大小变化时不需要重新分配空间。 ##创建数组123var arr = [];//var arr = new Array();var arr = [1,2];//arr.length为2var arr = [1,,2];//arr.length为3，稀疏数组包含undefind元素 ##元素元素的">
-<meta property="og:updated_time" content="2017-07-15T14:04:18.203Z">
+<meta property="og:description" content="字符串有length属性，返回字符串长度字符串和数组类似的方法有：concat, slice, split, indexOf, lastIndexOf,  常用字符串方法(都不改变原始字符串)toLowerCase()和toUpperCase 大小写转换12345var str = &apos;I Love you&apos;;var a = str.toLowerCase();var b = str.toUpper">
+<meta property="og:updated_time" content="2017-07-30T14:55:54.220Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javaScript基础——数组">
-<meta name="twitter:description" content="js数组是由为任意类型的元素组成的有序集合，元素的索引从0开始。其最大索引为 4294967294，数组大小变化时不需要重新分配空间。 ##创建数组123var arr = [];//var arr = new Array();var arr = [1,2];//arr.length为2var arr = [1,,2];//arr.length为3，稀疏数组包含undefind元素 ##元素元素的">
+<meta name="twitter:title" content="字符串方法">
+<meta name="twitter:description" content="字符串有length属性，返回字符串长度字符串和数组类似的方法有：concat, slice, split, indexOf, lastIndexOf,  常用字符串方法(都不改变原始字符串)toLowerCase()和toUpperCase 大小写转换12345var str = &apos;I Love you&apos;;var a = str.toLowerCase();var b = str.toUpper">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/javaScript基础——数组/"/>
+  <link rel="canonical" href="http://yoursite.com/字符串方法/"/>
 
 
 
 
 
-  <title>javaScript基础——数组 | blog</title>
+  <title>字符串方法 | blog</title>
   
 
 
@@ -255,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/javaScript基础——数组/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/字符串方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -272,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">javaScript基础——数组</h1>
+          <h1 class="post-title" itemprop="name headline">字符串方法</h1>
         
 
         <div class="post-meta">
@@ -284,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T21:06:26+08:00">
-                2017-07-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T22:14:31+08:00">
+                2017-07-30
               </time>
             
 
@@ -319,12 +319,11 @@
       
 
       
-        <p>js数组是由为任意类型的元素组成的有序集合，元素的索引从0开始。<br>其最大索引为 4294967294，数组大小变化时不需要重新分配空间。</p>
-<p>##创建数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [];<span class="comment">//var arr = new Array();</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>];<span class="comment">//arr.length为2</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,,<span class="number">2</span>];<span class="comment">//arr.length为3，稀疏数组包含undefind元素</span></div></pre></td></tr></table></figure></p>
-<p>##元素<br>元素的读写<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log(a[<span class="number">0</span>]); <span class="comment">//1</span></div><div class="line">a[<span class="number">1</span>] = <span class="number">22</span>;</div><div class="line"><span class="built_in">console</span>.log(a[<span class="number">1</span>]); <span class="comment">//22</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> b = [];</div><div class="line">b[<span class="string">'bb'</span>] = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(b));<span class="comment">//这样赋值，数组变成了类数组</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [];</div><div class="line">a[<span class="string">"1000"</span>] = <span class="number">1</span>;<span class="comment">//数字类的字符串转换为了数字</span></div><div class="line"><span class="built_in">console</span>.log(a.length);<span class="comment">//1001</span></div><div class="line"><span class="comment">//js会自动维护范围内的数组长度(length属性);</span></div></pre></td></tr></table></figure>
-<p>##数组遍历<br>for()<br>forEach()</p>
-<p>##数组方法<br>检测数组 Array.isArray()返回true和false,相对于instanceof更严谨</p>
+        <p>字符串有length属性，返回字符串长度<br>字符串和数组类似的方法有：<br>concat, slice, split, indexOf, lastIndexOf, </p>
+<h2 id="常用字符串方法-都不改变原始字符串"><a href="#常用字符串方法-都不改变原始字符串" class="headerlink" title="常用字符串方法(都不改变原始字符串)"></a>常用字符串方法(都不改变原始字符串)</h2><p>toLowerCase()和toUpperCase 大小写转换<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'I Love you'</span>;</div><div class="line"><span class="keyword">var</span> a = str.toLowerCase();</div><div class="line"><span class="keyword">var</span> b = str.toUpperCase();</div><div class="line">a<span class="comment">// i love you</span></div><div class="line">b<span class="comment">// I LOVE YOU</span></div></pre></td></tr></table></figure></p>
+<p>charAt()和charCodeAt 返回指定位置字符和Unicode编码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"I Love you"</span>;</div><div class="line"><span class="keyword">var</span> a = str.charAt(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> b = str.charCodeAt(<span class="number">1</span>);</div><div class="line">a<span class="comment">// L</span></div><div class="line">b<span class="comment">// 76</span></div></pre></td></tr></table></figure></p>
+<p>match() 查找匹配的字符<br>replace() 替换匹配的字符<br>search() 查找匹配的字符起始位置<br>参数可以是正则表达式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"I Love you"</span>; </div><div class="line"><span class="keyword">var</span> reg = <span class="regexp">/o/</span>;<span class="comment">//匹配字符'o'</span></div><div class="line"><span class="keyword">var</span> a = str.match(reg);</div><div class="line"><span class="keyword">var</span> b = str.replace(reg, <span class="string">'dd'</span>);</div><div class="line"><span class="keyword">var</span> c = str.search(reg);</div><div class="line">a[<span class="number">0</span>]<span class="comment">//o</span></div><div class="line">b<span class="comment">// I Lddve you</span></div><div class="line">c<span class="comment">//3</span></div></pre></td></tr></table></figure></p>
+<p>substr() 提取字符 (从头部开始)<br>substring() 提取字符 (区间内,不包括结束位置字符)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'I Love you'</span>;</div><div class="line"><span class="keyword">var</span> a = str.substr(<span class="number">2</span>);</div><div class="line"><span class="keyword">var</span> b = str.substring(<span class="number">2</span>,<span class="number">5</span>);</div><div class="line">a<span class="comment">//love you</span></div><div class="line">b<span class="comment">//lov</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -361,8 +360,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/javaScript基础——函数/" rel="next" title="javaScript基础——函数">
-                <i class="fa fa-chevron-left"></i> javaScript基础——函数
+              <a href="/对象方法/" rel="next" title="对象方法">
+                <i class="fa fa-chevron-left"></i> 对象方法
               </a>
             
           </div>
@@ -371,8 +370,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/javaScript基础——原型/" rel="prev" title="javaScript基础——原型">
-                javaScript基础——原型 <i class="fa fa-chevron-right"></i>
+              <a href="/全局方法/" rel="prev" title="全局方法">
+                全局方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -420,8 +419,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -483,6 +491,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用字符串方法-都不改变原始字符串"><span class="nav-number">1.</span> <span class="nav-text">常用字符串方法(都不改变原始字符串)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
