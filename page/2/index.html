@@ -253,6 +253,1050 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/全局方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/全局方法/" itemprop="url">全局方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T22:59:37+08:00">
+                2017-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>字符串转数字：<br>parseFloat()字符串转成浮点数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;</div><div class="line"><span class="keyword">var</span> str1 = <span class="string">'123'</span>;</div><div class="line"><span class="keyword">var</span> str2 = <span class="string">'123.05'</span>;</div><div class="line"><span class="keyword">var</span> str3 = <span class="string">'12tp3'</span>;</div><div class="line"></div><div class="line"><span class="built_in">parseFloat</span>(obj);<span class="comment">//NaN</span></div><div class="line"><span class="built_in">parseFloat</span>(str1);<span class="comment">//123</span></div><div class="line"><span class="built_in">parseFloat</span>(str2);<span class="comment">//123.05</span></div><div class="line"><span class="built_in">parseFloat</span>(str3);<span class="comment">//12 到第一个非数字停止了</span></div></pre></td></tr></table></figure></p>
+<p>parseInt()字符串转成整数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n1 = <span class="string">'123.5'</span></div><div class="line"><span class="built_in">parseInt</span>(n1);<span class="comment">//123</span></div><div class="line"><span class="built_in">parseInt</span>(n1, <span class="number">2</span>);<span class="comment">//1 （？？未理解）</span></div></pre></td></tr></table></figure></p>
+<p>String()对象转字符串<br>一般使用JSON对象的stringify方法转<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">name</span>:<span class="string">'1'</span>&#125;</div><div class="line"><span class="built_in">String</span>(obj);<span class="comment">//[object Object] 其实调用了对象toString方法</span></div><div class="line"><span class="built_in">JSON</span>.stringify(obj);<span class="comment">//'&#123;"name":"1"&#125;'</span></div></pre></td></tr></table></figure></p>
+<p>Number()对象转数字</p>
+<p>isNaN()判断是否为数字<br>NaN ： not a number</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/字符串方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/字符串方法/" itemprop="url">字符串方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T22:14:31+08:00">
+                2017-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>字符串有length属性，返回字符串长度<br>字符串和数组类似的方法有：<br>concat, slice, split, indexOf, lastIndexOf, </p>
+<h2 id="常用字符串方法-都不改变原始字符串"><a href="#常用字符串方法-都不改变原始字符串" class="headerlink" title="常用字符串方法(都不改变原始字符串)"></a>常用字符串方法(都不改变原始字符串)</h2><p>toLowerCase()和toUpperCase 大小写转换<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'I Love you'</span>;</div><div class="line"><span class="keyword">var</span> a = str.toLowerCase();</div><div class="line"><span class="keyword">var</span> b = str.toUpperCase();</div><div class="line">a<span class="comment">// i love you</span></div><div class="line">b<span class="comment">// I LOVE YOU</span></div></pre></td></tr></table></figure></p>
+<p>charAt()和charCodeAt 返回指定位置字符和Unicode编码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"I Love you"</span>;</div><div class="line"><span class="keyword">var</span> a = str.charAt(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> b = str.charCodeAt(<span class="number">1</span>);</div><div class="line">a<span class="comment">// L</span></div><div class="line">b<span class="comment">// 76</span></div></pre></td></tr></table></figure></p>
+<p>match() 查找匹配的字符<br>replace() 替换匹配的字符<br>search() 查找匹配的字符起始位置<br>参数可以是正则表达式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"I Love you"</span>; </div><div class="line"><span class="keyword">var</span> reg = <span class="regexp">/o/</span>;<span class="comment">//匹配字符'o'</span></div><div class="line"><span class="keyword">var</span> a = str.match(reg);</div><div class="line"><span class="keyword">var</span> b = str.replace(reg, <span class="string">'dd'</span>);</div><div class="line"><span class="keyword">var</span> c = str.search(reg);</div><div class="line">a[<span class="number">0</span>]<span class="comment">//o</span></div><div class="line">b<span class="comment">// I Lddve you</span></div><div class="line">c<span class="comment">//3</span></div></pre></td></tr></table></figure></p>
+<p>substr() 提取字符 (从头部开始)<br>substring() 提取字符 (区间内,不包括结束位置字符)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'I Love you'</span>;</div><div class="line"><span class="keyword">var</span> a = str.substr(<span class="number">2</span>);</div><div class="line"><span class="keyword">var</span> b = str.substring(<span class="number">2</span>,<span class="number">5</span>);</div><div class="line">a<span class="comment">//love you</span></div><div class="line">b<span class="comment">//lov</span></div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/对象方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/对象方法/" itemprop="url">对象方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T21:26:01+08:00">
+                2017-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>hasOwnProperty()<br>返回一个布尔值判断对象是否有此属性(只包含自有属性)<br>isPrototypeOf()<br>返回一个布尔值判断对象是否在另一个对象原型链中<br>propertyIsEnumerable()<br>返回一个布尔值判断属性是否为可枚举的自身属性<br>toString()<br>返回一个表示对象的字符串（一般已被覆盖）<br>toLocaleString()<br>类似返回对象本地化字符串<br>valueOf()<br>一般有系统自动调用，如对象转数字</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/事件特性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/事件特性/" itemprop="url">事件特性</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T17:03:39+08:00">
+                2017-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>js事件流程是从事件捕获-&gt;目标事件-&gt;冒泡事件<br>旧ie内核默认只有事件冒泡<br>事件冒泡是自下而上的执行目标DOM外其他的dom事件，捕获反之<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">//chrome浏览器</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"o1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"o2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> odiv = <span class="built_in">document</span>.getElementById(id);</div><div class="line">    <span class="keyword">return</span> odiv;</div><div class="line">  &#125;</div><div class="line">  $(<span class="string">"o1"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o1'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line">  $(<span class="string">"o2"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o2'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">//点击内层元素 依次打印了'o2'和'o1',发生了冒泡,</div><div class="line">//addEventListener的最后一个参数可以定义事件发生是在冒泡阶段(false)还是捕获阶段(true);</div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> odiv = <span class="built_in">document</span>.getElementById(id);</div><div class="line">    <span class="keyword">return</span> odiv;</div><div class="line">  &#125;</div><div class="line">  $(<span class="string">"o1"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o1'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line">  $(<span class="string">"o2"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o2'</span>);</div><div class="line">    event.stopPropagation();<span class="comment">//不派发事件。可阻止冒泡</span></div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">//点击只打印 o2</div></pre></td></tr></table></figure></p>
+<h2 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h2><p>根据冒泡的特性可以将子节点的事件都委托到父节点，提高性能，简化代码<br>一个简单通用事件代理：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">elem:绑定事件的dom type:事件类型，selector:需要代理的dom，fn:执行函数</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindEvnet</span>(<span class="params">elem, type, selector, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (fn === <span class="literal">null</span>) &#123;</div><div class="line">    fn = selector</div><div class="line">    selector = <span class="literal">null</span></div><div class="line">  &#125; <span class="comment">// 如果不传入第三个参数,调整参数</span></div><div class="line">  elem.addEventListener(type, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> target;</div><div class="line">    <span class="keyword">if</span> (selector) &#123;</div><div class="line">      target = e.target;</div><div class="line">      <span class="comment">//Element.matches函数可以精准匹配</span></div><div class="line">      <span class="keyword">if</span>(target.matches(selector)) &#123;</div><div class="line">        fn.call(target, e)</div><div class="line">        <span class="comment">// 使用call函数将触发的dom可绑为this，方便使用</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">      fn(e)</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="其他事件类型"><a href="#其他事件类型" class="headerlink" title="其他事件类型"></a>其他事件类型</h2><p>列表<a href="http://www.w3school.com.cn/jsref/dom_obj_event.asp" target="_blank" rel="external">w3school</a><br>可以用 mouseenter 和 mouserleave 默认不触发冒泡的鼠标移入移出（但未标准化）</p>
+<h2 id="Event的常用其他属性和方法"><a href="#Event的常用其他属性和方法" class="headerlink" title="Event的常用其他属性和方法"></a>Event的常用其他属性和方法</h2><p>preventDefault<br>可以阻止默认行为，如from表单中的button默认作为提交，a标签的默认链接行为。<br>target<br>返回触发事件的DOM<br>currentTarget<br>永远返回绑定了监听函数的DOM</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/数组方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/数组方法/" itemprop="url">数组方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T11:04:56+08:00">
+                2017-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>join() 将数组元素拼接成一个字符串<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">a.join(); <span class="comment">// "1,2,3" 默认以逗号连接</span></div><div class="line">a.join(<span class="string">""</span>); <span class="comment">// "123"</span></div><div class="line">a.join(<span class="string">" "</span>); <span class="comment">// "1 2 3"</span></div></pre></td></tr></table></figure></p>
+<p>reverse() 倒序 （修改了原数组）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">a.reverse(); <span class="comment">// [3,2,1]</span></div></pre></td></tr></table></figure></p>
+<p>sort() 排序 （修改了原数组）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">'d'</span>,<span class="string">'a'</span>,<span class="literal">undefined</span>,<span class="string">'T'</span>,<span class="number">3</span>];</div><div class="line">a.sort()<span class="comment">//[3,'T','a','d',undefined];</span></div><div class="line"><span class="keyword">var</span> b = [<span class="number">5</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">3</span>];</div><div class="line">b.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> a-b;</div><div class="line">&#125;)</div><div class="line">[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>] <span class="comment">//从小到大</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> c = [<span class="string">'d'</span>,<span class="string">'D'</span>,<span class="string">'a'</span>];</div><div class="line">c.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> x = a.toLowerCase(); <span class="comment">//将字符串转换为小写字母</span></div><div class="line">	<span class="keyword">var</span> y = b.toLowerCase();</div><div class="line">	<span class="keyword">if</span>(x &lt; y) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">	<span class="keyword">if</span>(x &gt; y) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;)</div><div class="line">c <span class="comment">//['a','d','D'] 按字母顺序，不转换小写时，大写在前</span></div></pre></td></tr></table></figure></p>
+<p>concat() 合并<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> b = [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</div><div class="line"><span class="keyword">var</span> c = [<span class="number">5</span>,<span class="number">6</span>,[<span class="number">7</span>,<span class="number">8</span>]]</div><div class="line">a.concat(b); <span class="comment">// [1,2,3,5,6,7];</span></div><div class="line">a.concat(c); <span class="comment">// [1,2,3,5,6,7,8]; //合并c数组中的元素</span></div></pre></td></tr></table></figure></p>
+<p>slice() 截取<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.slice(<span class="number">0</span>, <span class="number">2</span>); <span class="comment">// [1,2] 从0位置开始截取两个</span></div><div class="line">a.slice(<span class="number">3</span>); <span class="comment">//[4,5] 从3位置开始一直到最后</span></div><div class="line">a.slice(<span class="number">-1</span>); <span class="comment">// [5] 截取最后一个元素</span></div><div class="line">a.slice(<span class="number">-2</span>, <span class="number">-1</span>); [<span class="number">4</span>] 从倒数第二个开始到倒数第一个(不包括)结束</div></pre></td></tr></table></figure></p>
+<p>splice(a,b,c..) 插入或删除 （修改了原数组）<br>a:起始位置 b:删除的个数 c…:添加的元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.splice(<span class="number">0</span>,<span class="number">1</span>)<span class="comment">//返回[1],a=[2,3,4,5],从开始删除一个元素</span></div><div class="line">a.splice(<span class="number">0</span>)<span class="comment">// 返回[1,2,3,4,5],a=[],删除所有(省略了第二个元素)</span></div><div class="line">a.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">7</span>)<span class="comment">//返回[],a=[6,7,1,2,3,4,5],从第一个位置添加了两个元素</span></div><div class="line">a.splice(<span class="number">0</span>,<span class="number">1</span>,[<span class="number">6</span>,<span class="number">7</span>])<span class="comment">// 返回[1],a=[[6,7],2,3,4,5],不会添加数组中的元素</span></div></pre></td></tr></table></figure></p>
+<p>push()和pop() （修改了原数组）<br>将数组当做栈(先进后出)使用<br>push从尾部添加一些元素，返回新数组长度; pop从尾部删除一个元素，返回删除的值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">a.push(<span class="number">4</span>,<span class="number">5</span>); 返回 <span class="number">5</span>  a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">a.pop(); 返回 <span class="number">3</span> a = [<span class="number">1</span>,<span class="number">2</span>]</div></pre></td></tr></table></figure></p>
+<p>unshift()shift() 类似，不同点从头部开始</p>
+<p>forEach() 遍历<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>];</div><div class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">value, index, own</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(vlaue); <span class="comment">// a,b,c</span></div><div class="line">	<span class="built_in">console</span>.log(index); <span class="comment">// 0,1,2</span></div><div class="line">	<span class="built_in">console</span>.log(own); <span class="comment">//['a','b','c'],['a','b','c'],['a','b','c']</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>提前结束循环需要抛出异常，强制终止</p>
+<p>map() 调用每一个元素执行函数，返回新数组包含函数返回值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">b = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	</div><div class="line">&#125;)</div><div class="line">b <span class="comment">// [undefined,undefined,undefined]</span></div><div class="line">c = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value + <span class="number">1</span>;</div><div class="line">&#125;)</div><div class="line">c<span class="comment">// [2,3,4];</span></div></pre></td></tr></table></figure></p>
+<p>filter() 过滤<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value &gt; <span class="number">3</span>;</div><div class="line">&#125;) </div><div class="line">a <span class="comment">// [4,5]</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="literal">undefined</span>,<span class="number">3</span>];</div><div class="line">d = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value!==<span class="literal">undefined</span>;</div><div class="line">&#125;)</div><div class="line">d <span class="comment">// [1,2,3] 过滤undefined</span></div></pre></td></tr></table></figure></p>
+<p>every()和some() 判断<br>every() 所有元素满足条件,some()一个元素满足即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">a = arr.every(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value &gt; <span class="number">0</span></div><div class="line">&#125;)</div><div class="line">a<span class="comment">// true</span></div><div class="line">b = arr.some(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value === <span class="number">3</span>;</div><div class="line">&#125;)</div><div class="line">b <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>reduce()和reduceRight() 折叠<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> n1 = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> x + y;</div><div class="line">&#125;)</div><div class="line">n1 <span class="comment">// 6 ,相当于数组求和</span></div><div class="line"><span class="keyword">var</span> n2 = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> x + y;</div><div class="line">&#125;, <span class="number">1</span>)</div><div class="line">n2 <span class="comment">// 7, 若传入参数 参数将作为第一个循环的两个参数之一</span></div><div class="line"><span class="keyword">var</span> n3 = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> (x&gt;y)? x: y</div><div class="line">&#125;)</div><div class="line">n3<span class="comment">// 5 求最大值</span></div></pre></td></tr></table></figure></p>
+<p>reduceRight 从尾部开始执行<br>indexOf()和lastIndexOf() 索引<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> n = a.indexOf(<span class="number">3</span>); <span class="comment">//2 返回索引位置</span></div><div class="line"><span class="keyword">var</span> n2 = a.indexOf(<span class="number">6</span>); <span class="comment">//-1 不存在返回-1</span></div></pre></td></tr></table></figure></p>
+<p>可传第二个参数，表示开始搜索的位置<br>lastIndexOf()从尾部开始搜索<br>isArray() 判断是否为数组</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/github上传/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/github上传/" itemprop="url">github上传</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T21:24:39+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>将本地项目上传到github过程<br>进入项目，命令行初始化git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m &quot;...&quot; //此时上传到了本地</div><div class="line">git remote add origin xxx // xxx 为github 地址</div><div class="line">git push -u origin master // 上传到主分支</div></pre></td></tr></table></figure></p>
+<p>错误：failed to push some refs to git<br>原因：有一些文件没有在本地项目中，如readme，需要先将其合并<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull --rebase origin master //pull = fetch + merge</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/MongoDB使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/MongoDB使用/" itemprop="url">MongoDB使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T20:43:48+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>MongoDB 使用c++语言编写的NoSql(‘不仅仅是sql’)数据库之一，它提出非关系型数据库。最大的特点是高度扩展和灵活。其数据类似于json。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>进入<a href="https://www.mongodb.com/" target="_blank" rel="external">官网</a>下载安装包进行安装。<br>在计算机中一个盘根目录下新建一个如c:data/db文件作为数据库数据文件。<br>进入目录下使用命令行输入 mongod 显示 ok 说明数据库成功运行。<br>打开另一个命名行 输入mongo 即可以进入操作行。</p>
+<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><p>show dbs 查看所有数据库以及使用量，local数据库是系统本身创建。<br>use xxx(数据库名) 显示 switched to db xxx 选择使用哪一个数据库<br>show collections 显示当前数据库中的集合<br>db.xxx.drop() 删除xxx集合<br>db.dropDatabase() 删除当前数据库<br>其他增删改查类似其他数据库</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/express使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/express使用/" itemprop="url">express使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T18:34:53+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Expres是node.js主流的框架之一，（其公司还开发koa框架）。<br>简单理解是对node.js中API的又一次封装，使其开发更简单。</p>
+<p>express生成器可以快速搭建项目骨架，目前已经从现有版本（4X版本）分离出去，需要额外的安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install express -g</div><div class="line">npm install express-generator -g//安装生成器</div><div class="line"></div><div class="line">express  xxx //利用生成器生成项目目录</div></pre></td></tr></table></figure></p>
+<p>目录大体分析：<br>app.js 是程序入口文件<br>bin 项目启动文件<br>package.json 关于依赖信息<br>public 存放公共文件<br>routes 关于逻辑处理的程序<br>views 视图文件存放</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/关于node-js事件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/关于node-js事件/" itemprop="url">关于node.js事件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T17:59:32+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>关于nodejs 现有的理解</p>
+<p>JavaScript语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。那么，为什么JavaScript不能有多个线程呢？</p>
+<p>JavaScript的单线程，与它的用途有关。作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程再某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？</p>
+<p>所以，为了避免复杂性，从一诞生，JavaScript就是单线程，这已经成了这门语言的核心特征，将来也不会改变。</p>
+<p>为了利用多核CPU的计算能力，HTML5提出Web Worker标准，运行JavaScript脚本创建多个线程，但是子线程完全受主线程控制，且不得操作DOM。所以，这个新标准并没有改变JavaScript单线程的本质。</p>
+<p>nodejs是一种基于回调的运行方式，简单来说它将所有的事件推入到一个事件对列中，</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/node-js简单配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -360,872 +1404,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/javaScript基础——原型/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/javaScript基础——原型/" itemprop="url">javaScript基础——原型</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T08:24:02+08:00">
-                2017-07-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>函数都有一个prototype的属性，对象都有<strong>proto</strong>属性</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/javaScript基础——数组/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/javaScript基础——数组/" itemprop="url">javaScript基础——数组</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T21:06:26+08:00">
-                2017-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>js数组是由为任意类型的元素组成的有序集合，元素的索引从0开始。<br>其最大索引为 4294967294，数组大小变化时不需要重新分配空间。</p>
-<p>##创建数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [];<span class="comment">//var arr = new Array();</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>];<span class="comment">//arr.length为2</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,,<span class="number">2</span>];<span class="comment">//arr.length为3，稀疏数组包含undefind元素</span></div></pre></td></tr></table></figure></p>
-<p>##元素<br>元素的读写<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log(a[<span class="number">0</span>]); <span class="comment">//1</span></div><div class="line">a[<span class="number">1</span>] = <span class="number">22</span>;</div><div class="line"><span class="built_in">console</span>.log(a[<span class="number">1</span>]); <span class="comment">//22</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> b = [];</div><div class="line">b[<span class="string">'bb'</span>] = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(b));<span class="comment">//这样赋值，数组变成了类数组</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [];</div><div class="line">a[<span class="string">"1000"</span>] = <span class="number">1</span>;<span class="comment">//数字类的字符串转换为了数字</span></div><div class="line"><span class="built_in">console</span>.log(a.length);<span class="comment">//1001</span></div><div class="line"><span class="comment">//js会自动维护范围内的数组长度(length属性);</span></div></pre></td></tr></table></figure>
-<p>##数组遍历<br>for()<br>forEach()</p>
-<p>##数组方法<br>检测数组 Array.isArray()返回true和false,相对于instanceof更严谨</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/javaScript基础——函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/javaScript基础——函数/" itemprop="url">javaScript基础——函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-14T08:30:30+08:00">
-                2017-07-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>##函数的定义<br>函数声明和函数表达式<br>函数声明：<br>function a() {}<br>函数表达式：<br>var x = function {}<br>一般为匿名函数，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方便递归</span></div><div class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span>(x &gt; <span class="number">5</span>) &#123;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="keyword">return</span> start(x + <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(f(<span class="number">1</span>));<span class="comment">//6</span></div><div class="line"><span class="comment">// start函数名成为函数内部的一个局部变量</span></div></pre></td></tr></table></figure></p>
-<p>##函数作用域<br>js没有块级作用域（花括号），只有函数作用域。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(a);<span class="comment">//undefined , 申明变量a并提前到函数体上面并赋值为undefined</span></div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;     <span class="comment">// 变量a赋值为1</span></div><div class="line">  <span class="built_in">console</span>.log(a);<span class="comment">// 1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>##函数调用<br>作为函数，普通调用<br>作为方法，可以设计链式调用(jQuery源码设计)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> test = &#123;</div><div class="line">  <span class="attr">a</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">b</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">test.a().b()</div></pre></td></tr></table></figure></p>
-<p>构造函数,<br>间接调用<br>函数的call()方法和apply()方法</p>
-<p>##函数参数<br>省略的定义为undefind, 多余的自动省略<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line">&#125;</div><div class="line">test();<span class="comment">//undefined</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);<span class="comment">//3</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">0</span>]);<span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(test.length);<span class="comment">//2</span></div><div class="line">&#125;</div><div class="line">test(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line"><span class="comment">//arguments是类数组,包括传入的参数，严格模式('use strict')下只读</span></div><div class="line"><span class="comment">//arguments只有一个属性length</span></div><div class="line"><span class="comment">//arguments.length 实参个数</span></div><div class="line"><span class="comment">//test.length 形参个数</span></div></pre></td></tr></table></figure>
-<p>js是弱语言类型，传入参数时不做任何类型检测，有必要时需要自我定义<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">num</span>) </span>&#123;</div><div class="line"> <span class="keyword">if</span>(<span class="keyword">typeof</span>(num) === <span class="string">'number'</span>)&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'ok'</span>);</div><div class="line"> &#125;<span class="keyword">else</span> &#123;</div><div class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span> (<span class="string">"this no a number"</span>)</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//传入必须为number类型</span></div></pre></td></tr></table></figure></p>
-<p>##命名空间和闭包</p>
-<p>##函数记忆<br>是一种编程技巧,将上一次的计算结果放在闭包中,下一次去查找,实现’记忆’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fibonacci = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> memo = [<span class="number">0</span>, <span class="number">1</span>]; </div><div class="line">    <span class="keyword">var</span> fib = <span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> result = memo[n];</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> result !== <span class="string">'number'</span>) &#123;</div><div class="line">        <span class="comment">//判断语句，防止无限递归导致栈溢出</span></div><div class="line">            result = fib(n - <span class="number">1</span>) + fib(n - <span class="number">2</span>);</div><div class="line">            memo[n] = result;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> fib;</div><div class="line">&#125;();</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;=<span class="number">5</span>;i++)&#123;</div><div class="line">    <span class="built_in">console</span>.log(fibonacci(i))</div><div class="line">&#125;</div><div class="line"><span class="comment">//0,1,1,2,3,5</span></div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/javaScript基础——Object/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/javaScript基础——Object/" itemprop="url">javaScript基础——Object</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-13T10:45:45+08:00">
-                2017-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>一切皆对象<br>对象类似于属性的集合，每个属性是一个名/值对。</p>
-<h2 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h2><p>创建对象：对象直接量，关键字new，Object.create()<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对象直接量</span></div><div class="line"><span class="keyword">var</span> obj1 = &#123;</div><div class="line">	<span class="string">"aaa-bbb"</span>: <span class="number">1</span>,</div><div class="line">	<span class="string">"aaa bbb"</span>: <span class="number">2</span></div><div class="line">	<span class="comment">// 属性名中空格，连字符时必须为一个字符串,此时必须用引号</span></div><div class="line">	<span class="comment">//其他可无引号（ECMAScript 5）</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// new </span></div><div class="line"><span class="keyword">var</span> obj2 = <span class="keyword">new</span> <span class="built_in">Object</span>&#123;&#125;;<span class="comment">//相当于 var obj2 = &#123;&#125;</span></div></pre></td></tr></table></figure></p>
-<p>Object.create()为一个静态方法，不提供作为对象调用的方法。<br>其他静态函数<br>该有两个参数，第一个参数为一个需要的原型对象，第二个参数是对此对象属性的设置。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj3 = <span class="built_in">Object</span>.create(&#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">1</span>&#125;);</div><div class="line"><span class="comment">// obj3 以&#123;a:1,b:1&#125;对象为原型创建，继承了所有属性</span></div><div class="line"><span class="keyword">var</span> obj4 = <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.prototype);</div><div class="line"><span class="comment">//相当于 var obj4 = new Object();</span></div><div class="line"><span class="comment">// Object.prototype 是Object对象的原型属性(此属性是一个对象)，它封装了一些原始的方法。</span></div><div class="line"><span class="keyword">var</span> obj5 = <span class="built_in">Object</span>.create(<span class="literal">null</span>);</div><div class="line"><span class="comment">// 没有任何特性，甚至没有基础方法</span></div></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/javaScript基础——Object/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/javaScript基础——内置函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/javaScript基础——内置函数/" itemprop="url">javaScript基础——内置函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-15T00:00:00+08:00">
-                2016-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>内置函数有：Object Array Boolean Number String<br>    Function Date RegExp Error</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/javaScript基础——类型，值和变量/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/javaScript基础——类型，值和变量/" itemprop="url">javaScript基础——类型，值和变量</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-15T00:00:00+08:00">
-                2016-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">javaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h2><p>javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。</p>
-<p>js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)<br>    引用类型有：object(对象)，arry(数组)，function(函数)</p>
-<p>当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line"><span class="comment">//改变b的值</span></div><div class="line">b = <span class="number">2</span> ;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//2</span></div></pre></td></tr></table></figure></p>
-<p>a和b独自占据空间，改变b并不会影响a。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/javaScript基础——类型，值和变量/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/利用Hexo搭建博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/利用Hexo搭建博客/" itemprop="url">利用Hexo搭建博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-07-15T00:00:00+08:00">
-                2013-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>记录利用github托管和hexo博客框架搭建个人博客 </strong></p>
-<p>github 推出pages服务可以用于demo的演示或开源项目文档api托管。通过网上的一些文章，也可利用其搭建博客，搭建过程简单记录如下：</p>
-<h2 id="github操作"><a href="#github操作" class="headerlink" title="github操作"></a>github操作</h2><p>github不多介绍，点击进入<a href="https://github.com/" target="_blank" rel="external">官网</a>注册和创建仓库，仓库名为xxx.github.io，<strong>其中的xxx必须与自身的github昵称相同 </strong>。然后配置公钥，使github远程托管与本机建立链接。</p>
-<h2 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h2><p><a href="https://hexo.io/" target="_blank" rel="external">hexo</a>是一个博客框架，能快速高效的搭建博客。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/利用Hexo搭建博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1270,7 +1453,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

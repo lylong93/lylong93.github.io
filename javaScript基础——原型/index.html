@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="函数都有一个prototype的属性，对象都有proto属性">
+<meta name="description" content="javaScript中所有常用的内置对象其实都是构造函数，undefined和null除外，他们是特殊的对象 console.log(String); // function String() {}console.log(Array);// function Array() {}console.log(Function); //function Function() {}console.log(u">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javaScript基础——原型">
+<meta property="og:title" content="javaScript基础——原型链">
 <meta property="og:url" content="http://yoursite.com/javaScript基础——原型/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="函数都有一个prototype的属性，对象都有proto属性">
-<meta property="og:updated_time" content="2017-07-18T01:19:57.050Z">
+<meta property="og:description" content="javaScript中所有常用的内置对象其实都是构造函数，undefined和null除外，他们是特殊的对象 console.log(String); // function String() {}console.log(Array);// function Array() {}console.log(Function); //function Function() {}console.log(u">
+<meta property="og:updated_time" content="2017-07-31T08:03:53.450Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javaScript基础——原型">
-<meta name="twitter:description" content="函数都有一个prototype的属性，对象都有proto属性">
+<meta name="twitter:title" content="javaScript基础——原型链">
+<meta name="twitter:description" content="javaScript中所有常用的内置对象其实都是构造函数，undefined和null除外，他们是特殊的对象 console.log(String); // function String() {}console.log(Array);// function Array() {}console.log(Function); //function Function() {}console.log(u">
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <title>javaScript基础——原型 | blog</title>
+  <title>javaScript基础——原型链 | blog</title>
   
 
 
@@ -272,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">javaScript基础——原型</h1>
+          <h1 class="post-title" itemprop="name headline">javaScript基础——原型链</h1>
         
 
         <div class="post-meta">
@@ -319,7 +319,14 @@
       
 
       
-        <p>函数都有一个prototype的属性，对象都有<strong>proto</strong>属性</p>
+        <p>javaScript中所有常用的内置对象其实都是构造函数，undefined和null除外，他们是特殊的对象</p>
+<p>console.log(String); // function String() {}<br>console.log(Array);// function Array() {}<br>console.log(Function); //function Function() {}<br>console.log(undefined); // undefined<br>console.log(null); // object</p>
+<p>每个函数都有一个prototype(显示原型)属性，指向一个对象<br>以Array为例：<br>console.log(Array.prototype);//<br>[constructor: function, toString: function, toLocaleString: function, join: function, pop: function…]<br>包括了一些定义的属性，方法，所有Array实例都可以拥有</p>
+<p>每个对象又有一个<strong>proto</strong>(隐式原型)属性，指向一个对象<br>var a = new Array();<br>console.log(a.<strong>proto</strong> === Array.prototype);//true<br>隐式原型总指向它构造函数的显式原型</p>
+<p>一个对象想调用属性或方法会沿着隐式原型链查找原型中的属性或方法，就形成了原型链，直到Object.prototype对象截止，</p>
+<p>console.log(Object.prototype.<strong>proto</strong>) // null</p>
+<p>每个对象又有一个constructor属性，指向构造它的构造函数，这样就形成了一种三角关系</p>
+<p>console.log(typeof(undefined));//undefined<br>console.log(typeof(null)); //object</p>
 
       
     </div>
@@ -431,7 +438,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

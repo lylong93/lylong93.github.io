@@ -253,7 +253,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/全局方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/this/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -272,7 +272,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/全局方法/" itemprop="url">全局方法</a></h1>
+                <a class="post-title-link" href="/this/" itemprop="url">this</a></h1>
         
 
         <div class="post-meta">
@@ -284,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T22:59:37+08:00">
-                2017-07-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-01T20:29:42+08:00">
+                2017-08-01
               </time>
             
 
@@ -321,7 +321,15 @@
       
         
           
-            <p>parseFloat()<br>parseInt()<br>String()<br>Number()<br>isNaN()</p>
+            <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>js没有块级作用域，其他语言中花括号就是一个块级作用域，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</div><div class="line">   <span class="keyword">var</span> name = <span class="string">'kkk'</span>;</div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name);<span class="comment">//可以访问</span></div></pre></td></tr></table></figure></p>
+<p>但有函数作用域和全局作用域<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;<span class="comment">//全局作用域</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> b = <span class="number">2</span>; <span class="comment">//函数作用域</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(b);<span class="comment">//报错</span></div></pre></td></tr></table></figure></p>
+<p>作用域链<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;<span class="comment">//全局作用域</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(a);<span class="comment">//沿着作用域链查找</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>作用域链就是沿变量定义时(不是执行时)的父级域形成</p>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>this是执行时指向的执行上下文<br>作为普通对象执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>)</div><div class="line">&#125;</div><div class="line">fn(); <span class="comment">// window ,浏览器中指向全局window</span></div></pre></td></tr></table></figure></p>
+<p>作为构造函数执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fnn</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> fn = <span class="keyword">new</span> Fnn(<span class="string">'one'</span>);</div><div class="line">fn.name;<span class="comment">// one  this指向fn</span></div></pre></td></tr></table></figure></p>
+<p>附: 构造函数new的过程<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> <span class="keyword">this</span>;  <span class="comment">//定义this空对象</span></div><div class="line">    <span class="keyword">this</span>.xxx =... <span class="comment">//给this附属性</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>; <span class="comment">//返回this</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>作为对象属性执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">obj = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'one'</span>,</div><div class="line">    <span class="attr">spack</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">obj.spack(); <span class="comment">// one ,this指向obj对象</span></div></pre></td></tr></table></figure></p>
+<p>call apply bind函数改变this指向<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">obj = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'one'</span>,</div><div class="line">    <span class="attr">spack</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//定义另一个对象</span></div><div class="line">newObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'tow'</span>,</div><div class="line">&#125;</div><div class="line">obj.spack.call(newObj);<span class="comment">//tow</span></div><div class="line"></div><div class="line"><span class="comment">//使用bind</span></div><div class="line">newObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'tow'</span>,</div><div class="line">&#125;</div><div class="line">obj = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'one'</span>,</div><div class="line">    <span class="attr">spack</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;.bind(newObj)</div><div class="line">&#125;</div><div class="line"></div><div class="line">obj.spack();<span class="comment">//tow</span></div></pre></td></tr></table></figure></p>
 
           
         
@@ -365,7 +373,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/字符串方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/BOM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -384,7 +392,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/字符串方法/" itemprop="url">字符串方法</a></h1>
+                <a class="post-title-link" href="/BOM/" itemprop="url">BOM</a></h1>
         
 
         <div class="post-meta">
@@ -396,8 +404,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T22:14:31+08:00">
-                2017-07-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-01T17:48:08+08:00">
+                2017-08-01
               </time>
             
 
@@ -433,11 +441,13 @@
       
         
           
-            <p>字符串有length属性，返回字符串长度<br>字符串和数组类似的方法有：<br>concat, slice, split, indexOf, lastIndexOf, </p>
-<h2 id="常用字符串方法-都不改变原始字符串"><a href="#常用字符串方法-都不改变原始字符串" class="headerlink" title="常用字符串方法(都不改变原始字符串)"></a>常用字符串方法(都不改变原始字符串)</h2><p>toLowerCase()和toUpperCase 大小写转换<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'I Love you'</span>;</div><div class="line"><span class="keyword">var</span> a = str.toLowerCase();</div><div class="line"><span class="keyword">var</span> b = str.toUpperCase();</div><div class="line">a<span class="comment">// i love you</span></div><div class="line">b<span class="comment">// I LOVE YOU</span></div></pre></td></tr></table></figure></p>
-<p>charAt()和charCodeAt 返回指定位置字符和Unicode编码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"I Love you"</span>;</div><div class="line"><span class="keyword">var</span> a = str.charAt(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> b = str.charCodeAt(<span class="number">1</span>);</div><div class="line">a<span class="comment">// L</span></div><div class="line">b<span class="comment">// 76</span></div></pre></td></tr></table></figure></p>
-<p>match() 查找匹配的字符<br>replace() 替换匹配的字符<br>search() 查找匹配的字符起始位置<br>参数可以是正则表达式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"I Love you"</span>; </div><div class="line"><span class="keyword">var</span> reg = <span class="regexp">/o/</span>;<span class="comment">//匹配字符'o'</span></div><div class="line"><span class="keyword">var</span> a = str.match(reg);</div><div class="line"><span class="keyword">var</span> b = str.replace(reg, <span class="string">'dd'</span>);</div><div class="line"><span class="keyword">var</span> c = str.search(reg);</div><div class="line">a[<span class="number">0</span>]<span class="comment">//o</span></div><div class="line">b<span class="comment">// I Lddve you</span></div><div class="line">c<span class="comment">//3</span></div></pre></td></tr></table></figure></p>
-<p>substr() 提取字符 (从头部开始)<br>substring() 提取字符 (区间内,不包括结束位置字符)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'I Love you'</span>;</div><div class="line"><span class="keyword">var</span> a = str.substr(<span class="number">2</span>);</div><div class="line"><span class="keyword">var</span> b = str.substring(<span class="number">2</span>,<span class="number">5</span>);</div><div class="line">a<span class="comment">//love you</span></div><div class="line">b<span class="comment">//lov</span></div></pre></td></tr></table></figure></p>
+            <p>通常讲的js是指运行在浏览器的js，这部分js其实遵循了两个标准，对于语法遵循EMCA 262 标准，而浏览器标准W3C定义了DOM，BOM，事件 ajax，http，存储等，并定义了浏览器全局变量如 ：window,document,navigator…</p>
+<p>BOM 对象</p>
+<p>window对象</p>
+<p>navigator对象<br>用来检测浏览器版本内核等<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ua = navigator.userAgent;</div><div class="line">ua.indexOf(<span class="string">'Chrome'</span>);<span class="comment">//检索Chrome字符串，大体判断内核</span></div></pre></td></tr></table></figure></p>
+<p>screen对象<br>关于设备信息<br>screen.width<br>screen.height</p>
+<p>History对象<br>history.back() 前一个url<br>history.forward() 后一个url<br>history.go() 转到具体页 可以传入数字如： -1 表示前一页</p>
+<p>Location 地址对象<br>见<a href="http://www.w3school.com.cn/jsref/dom_obj_location.asp" target="_blank" rel="external">Location 对象属性</a></p>
 
           
         
@@ -481,7 +491,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/对象方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/DOM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -500,7 +510,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/对象方法/" itemprop="url">对象方法</a></h1>
+                <a class="post-title-link" href="/DOM/" itemprop="url">DOM</a></h1>
         
 
         <div class="post-meta">
@@ -512,8 +522,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T21:26:01+08:00">
-                2017-07-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-01T08:37:39+08:00">
+                2017-08-01
               </time>
             
 
@@ -549,7 +559,31 @@
       
         
           
-            <p>hasOwnProperty()<br>返回一个布尔值判断对象是否有此属性(只包含自有属性)<br>isPrototypeOf()<br>返回一个布尔值判断对象是否在另一个对象原型链中<br>propertyIsEnumerable()<br>返回一个布尔值判断属性是否为可枚举的自身属性<br>toString()<br>返回一个表示对象的字符串（一般已被覆盖）<br>toLocaleString()<br>类似返回对象本地化字符串<br>valueOf()<br>一般有系统自动调用，如对象转数字</p>
+            <p>实验了dom一些方法</p>
+<p>DOM :Document Object Model<br>DOM是一种典型的树型结构</p>
+<h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><p>节点一般有三个属性：<br>nodeName  节点名称<br>nodeValue  节点值<br>nodeType 节点类型<br>对应的类型：<br>元素节点1 属性节点 2文本节点3 注释8 文档9</p>
+<p>整个文档就是一个文档节点</p>
+<h2 id="操作节点"><a href="#操作节点" class="headerlink" title="操作节点"></a>操作节点</h2><p>document对象<br>document.activeElement();返回焦点元素</p>
+<p>document.createElement(); 创建了元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>); </div><div class="line">a<span class="comment">//&lt;div&gt;&lt;/div&gt;</span></div></pre></td></tr></table></figure></p>
+<p>document.createTextNode();创建了文本<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createTextNode(<span class="string">'div'</span>); </div><div class="line">a<span class="comment">//"div"</span></div></pre></td></tr></table></figure></p>
+<p>document.getElementById(); 指定id的第一个元素<br>document.getElementsByClassName();//指定类名对象集合<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span>&gt;&lt;/button&gt;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'one'</span>);</div><div class="line">a <span class="comment">// [div.one, div.one, button.one]</span></div></pre></td></tr></table></figure></p>
+<p>document.getElementsByName(); 指定name值 的集合<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">""</span> name=<span class="string">"one"</span>&gt;</div><div class="line">&lt;input type="" name="one"&gt;</div><div class="line">&lt;input type="" name="tow"&gt;</div><div class="line"></div><div class="line">var a = document.getElementsByName('one');</div><div class="line">a // [input,input]</div></pre></td></tr></table></figure></p>
+<p>document.getElementsByTagName();指定标签的集合<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">""</span> name=<span class="string">"one"</span>&gt;</div><div class="line">&lt;div class='t'&gt;&lt;/div&gt;</div><div class="line">&lt;input type=<span class="string">""</span> name=<span class="string">"tow"</span>&gt;</div><div class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'input'</span>);</div><div class="line">a<span class="comment">//[input, input]</span></div></pre></td></tr></table></figure></p>
+<p>document.querySelector(); 更加灵活的选择器,返回匹配的第一个元素<br>document.querySelectorAll();返回一个集合<br>参数可以是class，id，或属性值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;input id = <span class="string">'one'</span>&gt;</div><div class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'.one'</span>);<span class="comment">//&lt;div class="one"&gt;&lt;/div&gt;</span></div><div class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'#one'</span>);<span class="comment">//&lt;input id = 'one'&gt;</span></div></pre></td></tr></table></figure></p>
+<p><a href="https://developer.mozilla.org" target="_blank" rel="external">MDN</a>上的一个例子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"user-panel main"</span>&gt;</div><div class="line">    &lt;input name="login"/&gt; //这个标签将被返回</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">"div.user-panel.main input[name=login]"</span>);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>document.createAttribute();创建属性节点</p>
+<h2 id="DOM常用属性"><a href="#DOM常用属性" class="headerlink" title="DOM常用属性"></a>DOM常用属性</h2><p>element.appdendChild();//添加子节点<br>element.removeChild();//移除<br>element.replaceChild();//替换</p>
+<p>element.insertBefore();//给子元素前添加兄弟节点<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;div class="one"&gt;</div><div class="line">	&lt;div class="tow"&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">var newDiv = document.createElement('div');</div><div class="line">newDiv.setAttribute('class', 'newdiv');</div><div class="line">var oldDiv = document.querySelector('.one');</div><div class="line">oldDiv.insertBefore(newDiv,oldDiv.childNodes[0]);</div><div class="line">//参数(要插入的节点，指定插入的子元素(不填报错) )</div><div class="line"></div><div class="line">完成后:</div><div class="line">&lt;div class="one"&gt;</div><div class="line">	&lt;div class="newdiv"&gt;&lt;/div&gt;</div><div class="line">	&lt;div class="tow"&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>elment.firstChild 第一个子节点<br>elment.lastChild 最后一个子节点<br>elment.childNodes 子节点集合<br>elment.parentNode 父节点<br>elment.nextSibling 下一个兄弟节点<br>elment.previousSibling 上一个兄弟节点<br>不存在返回null</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;div class="wrapper"&gt;</div><div class="line">	&lt;div class="one"&gt;1&lt;/div&gt;</div><div class="line">	&lt;div class="tow"&gt;2&lt;/div&gt;</div><div class="line">	&lt;div class="three"&gt;3&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">var wr = document.querySelector('.wrapper');</div><div class="line">var a = wr.childNodes;</div><div class="line">a// [#text div #text div #text div #text]</div><div class="line">//空节点或文本节点也算做一个子节点，这里将空节点解析成了文本节点text</div><div class="line"></div><div class="line">var ch = document.querySelector('.tow');</div><div class="line">var b = ch.nextSibling</div><div class="line">b// #text ，其实是一个空节点</div><div class="line"></div><div class="line">//改变结构</div><div class="line">&lt;div class="wrapper"&gt;</div><div class="line">	&lt;div class="one"&gt;1&lt;/div&gt;&lt;div class="tow"&gt;2&lt;/div&gt;&lt;div class="three"&gt;3&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">b// &lt;div class="three"&gt;3&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>cloneNode()克隆<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class="wrapper"&gt;</div><div class="line">	&lt;div class="one"&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">var wr = document.querySelector('.wrapper');</div><div class="line">var a = wr.clone(); //浅克隆</div><div class="line">var b = wr.clone(true); //深克隆</div><div class="line">a//&lt;div class="wrapper"&gt;&lt;/div&gt; </div><div class="line">b// &lt;div class="wrapper"&gt;&lt;div class="one"&gt;&lt;/div&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>nodeValue() 获取节点属性的值<br>(节点包括属性节点，文本节点，元素节点不可用)<br>innerHTML() 获取或设置包括的所有html<br>textContent() 获取或设置所有的文本节点<br>获取时会保留空行与空格与换行符<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div id="wrapper"&gt;111</div><div class="line">	&lt;div class="one"&gt;333&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">var wr = document.getElementById('wrapper');</div><div class="line">wr.innerHTML // &lt;div class="one"&gt;333&lt;/div&gt;</div><div class="line">wr.textContent </div><div class="line">// 111 </div><div class="line">// 333</div><div class="line">wr.childNodes[0].nodeValue //111</div></pre></td></tr></table></figure></p>
+<h2 id="标签属性"><a href="#标签属性" class="headerlink" title="标签属性"></a>标签属性</h2><p>prototype ,js操作标签时的属性<br>Attribute ,文档标签的自有属性</p>
+<p>attribute相关操作<br>element.attributes   获取属性集合(NamedNodeMap) 注意没有括号<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span> id=<span class="string">"odiv"</span>&gt;&lt;/div&gt;</div><div class="line"><span class="keyword">var</span> wr = <span class="built_in">document</span>.querySelctor(<span class="string">'.one'</span>);</div><div class="line">wr.attributes<span class="comment">//&#123;0: class, 1: id, length: 2&#125;</span></div></pre></td></tr></table></figure></p>
+<p>element.getAttribute() 返回属性值<br>element.getAttributeNode() 返回一个arr对象(不建议使用arr对象)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span> id=<span class="string">"odiv"</span>&gt;&lt;/div&gt;</div><div class="line"><span class="keyword">var</span> wr = <span class="built_in">document</span>.querySelctor(<span class="string">'.one'</span>);</div><div class="line">wr.getAttribute<span class="comment">//one</span></div><div class="line">wr.getAttributeNode <span class="comment">// class="one"</span></div><div class="line">wr.getAttributeNode.value <span class="comment">// one</span></div></pre></td></tr></table></figure></p>
+<p>element.setAttribute() 设置属性值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span> id=<span class="string">"odiv"</span>&gt;&lt;/div&gt;</div><div class="line"><span class="keyword">var</span> wr = <span class="built_in">document</span>.querySelctor(<span class="string">'.one'</span>);</div><div class="line">wr.setAttribute(<span class="string">'data'</span>, <span class="string">'123'</span>);</div><div class="line">wr<span class="comment">// &lt;div class="one" id="odiv" data="123"&gt;&lt;/div&gt;</span></div></pre></td></tr></table></figure></p>
+<p>element.setAttributeNode() 设置属性节点<br>一般配合其他方法使用 如createAttribute<br><a href="http://www.w3school.com.cn/tiy/t.asp?f=jsref_element_setattributenode" target="_blank" rel="external">例</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//一般思路</span></div><div class="line"><span class="keyword">var</span> newNode = <span class="built_in">document</span>.createAttribute(<span class="string">'class'</span>);<span class="comment">//新建一个节点属性</span></div><div class="line">xxx.setAttributeNode(newNode);<span class="comment">//给标签添加这个属性</span></div></pre></td></tr></table></figure></p>
+<p>element.removeAttribute() 删除一个属性<br>element.removeAttributeNode() 删除属性并返回所删除的属性对象(难用…)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span> id=<span class="string">"odiv"</span>&gt;&lt;/div&gt;</div><div class="line"><span class="keyword">var</span> wr = <span class="built_in">document</span>.querySelctor(<span class="string">'.one'</span>);</div><div class="line">wr.removeAttribute(<span class="string">'id'</span>);</div><div class="line">wr<span class="comment">// &lt;div class="one"&gt;&lt;/div&gt; </span></div><div class="line"><span class="comment">//即便删除标记属性 也能暂时通过querySelctor获取到标签</span></div><div class="line">wr.removeAttribute(<span class="string">'class'</span>);</div><div class="line">wr<span class="comment">// &lt;div &gt;&lt;/div&gt;</span></div></pre></td></tr></table></figure></p>
 
           
         
@@ -593,7 +627,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/事件特性/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/视频播放网站制作整理（3）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -612,7 +646,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/事件特性/" itemprop="url">事件特性</a></h1>
+                <a class="post-title-link" href="/视频播放网站制作整理（3）/" itemprop="url">视频播放网站制作整理（3）</a></h1>
         
 
         <div class="post-meta">
@@ -624,250 +658,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T17:03:39+08:00">
-                2017-07-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>js事件流程是从事件捕获-&gt;目标事件-&gt;冒泡事件<br>旧ie内核默认只有事件冒泡<br>事件冒泡是自下而上的执行目标DOM外其他的dom事件，捕获反之<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">//chrome浏览器</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"o1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"o2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> odiv = <span class="built_in">document</span>.getElementById(id);</div><div class="line">    <span class="keyword">return</span> odiv;</div><div class="line">  &#125;</div><div class="line">  $(<span class="string">"o1"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o1'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line">  $(<span class="string">"o2"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o2'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">//点击内层元素 依次打印了'o2'和'o1',发生了冒泡,</div><div class="line">//addEventListener的最后一个参数可以定义事件发生是在冒泡阶段(false)还是捕获阶段(true);</div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> odiv = <span class="built_in">document</span>.getElementById(id);</div><div class="line">    <span class="keyword">return</span> odiv;</div><div class="line">  &#125;</div><div class="line">  $(<span class="string">"o1"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o1'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line">  $(<span class="string">"o2"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o2'</span>);</div><div class="line">    event.stopPropagation();<span class="comment">//不派发事件。可阻止冒泡</span></div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">//点击只打印 o2</div></pre></td></tr></table></figure></p>
-<h2 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h2><p>根据冒泡的特性可以将子节点的事件都委托到父节点，提高性能，简化代码<br>一个简单通用事件代理：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">elem:绑定事件的dom type:事件类型，selector:需要代理的dom，fn:执行函数</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindEvnet</span>(<span class="params">elem, type, selector, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (fn === <span class="literal">null</span>) &#123;</div><div class="line">    fn = selector</div><div class="line">    selector = <span class="literal">null</span></div><div class="line">  &#125; <span class="comment">// 如果不传入第三个参数,调整参数</span></div><div class="line">  elem.addEventListener(type, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> target;</div><div class="line">    <span class="keyword">if</span> (selector) &#123;</div><div class="line">      target = e.target;</div><div class="line">      <span class="comment">//Element.matches函数可以精准匹配</span></div><div class="line">      <span class="keyword">if</span>(target.matches(selector)) &#123;</div><div class="line">        fn.call(target, e)</div><div class="line">        <span class="comment">// 使用call函数将触发的dom可绑为this，方便使用</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">      fn(e)</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="其他事件类型"><a href="#其他事件类型" class="headerlink" title="其他事件类型"></a>其他事件类型</h2><p>列表<a href="http://www.w3school.com.cn/jsref/dom_obj_event.asp" target="_blank" rel="external">w3school</a><br>可以用 mouseenter 和 mouserleave 默认不触发冒泡的鼠标移入移出（但未标准化）</p>
-<h2 id="Event的常用其他属性和方法"><a href="#Event的常用其他属性和方法" class="headerlink" title="Event的常用其他属性和方法"></a>Event的常用其他属性和方法</h2><p>preventDefault<br>可以阻止默认行为，如from表单中的button默认作为提交，a标签的默认链接行为。<br>target<br>返回触发事件的DOM<br>currentTarget<br>永远返回绑定了监听函数的DOM</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/数组方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/数组方法/" itemprop="url">数组方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T11:04:56+08:00">
-                2017-07-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>join() 将数组元素拼接成一个字符串<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">a.join(); <span class="comment">// "1,2,3" 默认以逗号连接</span></div><div class="line">a.join(<span class="string">""</span>); <span class="comment">// "123"</span></div><div class="line">a.join(<span class="string">" "</span>); <span class="comment">// "1 2 3"</span></div></pre></td></tr></table></figure></p>
-<p>reverse() 倒序 （修改了原数组）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">a.reverse(); <span class="comment">// [3,2,1]</span></div></pre></td></tr></table></figure></p>
-<p>sort() 排序 （修改了原数组）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">'d'</span>,<span class="string">'a'</span>,<span class="literal">undefined</span>,<span class="string">'T'</span>,<span class="number">3</span>];</div><div class="line">a.sort()<span class="comment">//[3,'T','a','d',undefined];</span></div><div class="line"><span class="keyword">var</span> b = [<span class="number">5</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">3</span>];</div><div class="line">b.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> a-b;</div><div class="line">&#125;)</div><div class="line">[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>] <span class="comment">//从小到大</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> c = [<span class="string">'d'</span>,<span class="string">'D'</span>,<span class="string">'a'</span>];</div><div class="line">c.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> x = a.toLowerCase(); <span class="comment">//将字符串转换为小写字母</span></div><div class="line">	<span class="keyword">var</span> y = b.toLowerCase();</div><div class="line">	<span class="keyword">if</span>(x &lt; y) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">	<span class="keyword">if</span>(x &gt; y) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;)</div><div class="line">c <span class="comment">//['a','d','D'] 按字母顺序，不转换小写时，大写在前</span></div></pre></td></tr></table></figure></p>
-<p>concat() 合并<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> b = [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</div><div class="line"><span class="keyword">var</span> c = [<span class="number">5</span>,<span class="number">6</span>,[<span class="number">7</span>,<span class="number">8</span>]]</div><div class="line">a.concat(b); <span class="comment">// [1,2,3,5,6,7];</span></div><div class="line">a.concat(c); <span class="comment">// [1,2,3,5,6,7,8]; //合并c数组中的元素</span></div></pre></td></tr></table></figure></p>
-<p>slice() 截取<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.slice(<span class="number">0</span>, <span class="number">2</span>); <span class="comment">// [1,2] 从0位置开始截取两个</span></div><div class="line">a.slice(<span class="number">3</span>); <span class="comment">//[4,5] 从3位置开始一直到最后</span></div><div class="line">a.slice(<span class="number">-1</span>); <span class="comment">// [5] 截取最后一个元素</span></div><div class="line">a.slice(<span class="number">-2</span>, <span class="number">-1</span>); [<span class="number">4</span>] 从倒数第二个开始到倒数第一个(不包括)结束</div></pre></td></tr></table></figure></p>
-<p>splice(a,b,c..) 插入或删除 （修改了原数组）<br>a:起始位置 b:删除的个数 c…:添加的元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.splice(<span class="number">0</span>,<span class="number">1</span>)<span class="comment">//返回[1],a=[2,3,4,5],从开始删除一个元素</span></div><div class="line">a.splice(<span class="number">0</span>)<span class="comment">// 返回[1,2,3,4,5],a=[],删除所有(省略了第二个元素)</span></div><div class="line">a.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">7</span>)<span class="comment">//返回[],a=[6,7,1,2,3,4,5],从第一个位置添加了两个元素</span></div><div class="line">a.splice(<span class="number">0</span>,<span class="number">1</span>,[<span class="number">6</span>,<span class="number">7</span>])<span class="comment">// 返回[1],a=[[6,7],2,3,4,5],不会添加数组中的元素</span></div></pre></td></tr></table></figure></p>
-<p>push()和pop() （修改了原数组）<br>将数组当做栈(先进后出)使用<br>push从尾部添加一些元素，返回新数组长度; pop从尾部删除一个元素，返回删除的值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">a.push(<span class="number">4</span>,<span class="number">5</span>); 返回 <span class="number">5</span>  a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">a.pop(); 返回 <span class="number">3</span> a = [<span class="number">1</span>,<span class="number">2</span>]</div></pre></td></tr></table></figure></p>
-<p>unshift()shift() 类似，不同点从头部开始</p>
-<p>forEach() 遍历<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>];</div><div class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">value, index, own</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(vlaue); <span class="comment">// a,b,c</span></div><div class="line">	<span class="built_in">console</span>.log(index); <span class="comment">// 0,1,2</span></div><div class="line">	<span class="built_in">console</span>.log(own); <span class="comment">//['a','b','c'],['a','b','c'],['a','b','c']</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>提前结束循环需要抛出异常，强制终止</p>
-<p>map() 调用每一个元素执行函数，返回新数组包含函数返回值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">b = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	</div><div class="line">&#125;)</div><div class="line">b <span class="comment">// [undefined,undefined,undefined]</span></div><div class="line">c = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value + <span class="number">1</span>;</div><div class="line">&#125;)</div><div class="line">c<span class="comment">// [2,3,4];</span></div></pre></td></tr></table></figure></p>
-<p>filter() 过滤<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value &gt; <span class="number">3</span>;</div><div class="line">&#125;) </div><div class="line">a <span class="comment">// [4,5]</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="literal">undefined</span>,<span class="number">3</span>];</div><div class="line">d = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value!==<span class="literal">undefined</span>;</div><div class="line">&#125;)</div><div class="line">d <span class="comment">// [1,2,3] 过滤undefined</span></div></pre></td></tr></table></figure></p>
-<p>every()和some() 判断<br>every() 所有元素满足条件,some()一个元素满足即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">a = arr.every(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value &gt; <span class="number">0</span></div><div class="line">&#125;)</div><div class="line">a<span class="comment">// true</span></div><div class="line">b = arr.some(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> value === <span class="number">3</span>;</div><div class="line">&#125;)</div><div class="line">b <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
-<p>reduce()和reduceRight() 折叠<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> n1 = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> x + y;</div><div class="line">&#125;)</div><div class="line">n1 <span class="comment">// 6 ,相当于数组求和</span></div><div class="line"><span class="keyword">var</span> n2 = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> x + y;</div><div class="line">&#125;, <span class="number">1</span>)</div><div class="line">n2 <span class="comment">// 7, 若传入参数 参数将作为第一个循环的两个参数之一</span></div><div class="line"><span class="keyword">var</span> n3 = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> (x&gt;y)? x: y</div><div class="line">&#125;)</div><div class="line">n3<span class="comment">// 5 求最大值</span></div></pre></td></tr></table></figure></p>
-<p>reduceRight 从尾部开始执行<br>indexOf()和lastIndexOf() 索引<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> n = a.indexOf(<span class="number">3</span>); <span class="comment">//2 返回索引位置</span></div><div class="line"><span class="keyword">var</span> n2 = a.indexOf(<span class="number">6</span>); <span class="comment">//-1 不存在返回-1</span></div></pre></td></tr></table></figure></p>
-<p>可传第二个参数，表示开始搜索的位置<br>lastIndexOf()从尾部开始搜索<br>isArray() 判断是否为数组</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/ed-app整理（1）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/ed-app整理（1）/" itemprop="url">ed_app整理（1）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T22:05:18+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T21:45:47+08:00">
+                2017-07-31
               </time>
             
 
@@ -946,7 +738,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/github上传/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/视频播放网站制作整理（2）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -965,7 +757,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/github上传/" itemprop="url">github上传</a></h1>
+                <a class="post-title-link" href="/视频播放网站制作整理（2）/" itemprop="url">视频播放网站制作整理（2）</a></h1>
         
 
         <div class="post-meta">
@@ -977,8 +769,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T21:24:39+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T21:40:02+08:00">
+                2017-07-31
               </time>
             
 
@@ -1014,8 +806,12 @@
       
         
           
-            <p>将本地项目上传到github过程<br>进入项目，命令行初始化git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m &quot;...&quot; //此时上传到了本地</div><div class="line">git remote add origin xxx // xxx 为github 地址</div><div class="line">git push -u origin master // 上传到主分支</div></pre></td></tr></table></figure></p>
-<p>错误：failed to push some refs to git<br>原因：有一些文件没有在本地项目中，如readme，需要先将其合并<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull --rebase origin master //pull = fetch + merge</div></pre></td></tr></table></figure></p>
+            <p>详细实现</p>
+<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><p>上传模块使用multer插件，multer可配置上传的路径和上传文件的名称格式，在表单提交的路由中使用upload.fields可以获得上传文件(获得一个类json数据)的名称，将名称路径存入数据库。</p>
+<h2 id="监听管理"><a href="#监听管理" class="headerlink" title="监听管理"></a>监听管理</h2><p>使用了video库，js设置监听函数，开始播放时监听timeupdate事件，设置问题时点击可以调用暂定事件。每次点击添加，即在form表单中创建两个input放入文本和时间(隐藏起来)，提交经过路由存在数据库。</p>
+<h2 id="互动管理"><a href="#互动管理" class="headerlink" title="互动管理"></a>互动管理</h2><p>播放时同样监听了播放器的timeupdate事件，并在视频加载时就使用ajax查找了设置的问题，循环数组与timeupdate对比，因为time时间更新没有固定规律，将对比的时间放在一个误差范围内（0.5s）,执行弹窗事件。</p>
+<h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><p>用户的登录使用bcryptjs加密模块，需要写在用户模型中，作为一个处理中间件。Mongoose中间件的使用pre(‘xxx’,function)，监听模型的xxx事件。</p>
+<h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><p>使用express-session和cookie一起配合使用，将session的数据存储在数据库，而将id作为一个cookie调用到浏览器中，验证使用。<br>connect-mongo模块用于将session存入mongo中</p>
 
           
         
@@ -1059,7 +855,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/MongoDB使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/视频播放网站制作整理（1）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -1078,7 +874,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/MongoDB使用/" itemprop="url">MongoDB使用</a></h1>
+                <a class="post-title-link" href="/视频播放网站制作整理（1）/" itemprop="url">视频播放网站制作整理（1）</a></h1>
         
 
         <div class="post-meta">
@@ -1090,8 +886,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T20:43:48+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T21:09:41+08:00">
+                2017-07-31
               </time>
             
 
@@ -1127,9 +923,13 @@
       
         
           
-            <p>MongoDB 使用c++语言编写的NoSql(‘不仅仅是sql’)数据库之一，它提出非关系型数据库。最大的特点是高度扩展和灵活。其数据类似于json。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>进入<a href="https://www.mongodb.com/" target="_blank" rel="external">官网</a>下载安装包进行安装。<br>在计算机中一个盘根目录下新建一个如c:data/db文件作为数据库数据文件。<br>进入目录下使用命令行输入 mongod 显示 ok 说明数据库成功运行。<br>打开另一个命名行 输入mongo 即可以进入操作行。</p>
-<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><p>show dbs 查看所有数据库以及使用量，local数据库是系统本身创建。<br>use xxx(数据库名) 显示 switched to db xxx 选择使用哪一个数据库<br>show collections 显示当前数据库中的集合<br>db.xxx.drop() 删除xxx集合<br>db.dropDatabase() 删除当前数据库<br>其他增删改查类似其他数据库</p>
+            <p>记录视频网站制作过程</p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>项目的目的是制作一个可互动式的教育网站，加强教学管理。</p>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，<br>用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看，</p>
+<h2 id="使用技术"><a href="#使用技术" class="headerlink" title="使用技术"></a>使用技术</h2><p>主要架构<br>node.js , mongodb , sass , jade<br>工程自动化<br>nodemon (自动重启node)<br>Browser-sync (浏览器热更新)</p>
+<h2 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h2><p>1，使用了express 框架，并使用express生成器快速搭建项目结构<br>2，修改项目入口文件模板引用，app.js文件中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'pug'</span>);<span class="comment">//修改视图文件 默认的是ejs</span></div><div class="line">                              <span class="comment">// jade已经改名为pug</span></div></pre></td></tr></table></figure></p>
+<p>3，使用npm安装nodemon，启动命令直接’nodemon’可以在修改了服务文件后自动重启node服务<br>4，安装 <a href="http://www.browsersync.cn/" target="_blank" rel="external">browsersync</a>,配置项目下的bs-config.js文件,主要配置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> <span class="string">"files"</span>: <span class="string">"**"</span>,</div><div class="line">  <span class="string">"watchEvents"</span>: [</div><div class="line">    <span class="string">"change"</span></div><div class="line">  ],</div><div class="line"> <span class="comment">//监听所有文件的改动</span></div><div class="line"><span class="string">"proxy"</span>: <span class="string">"localhost:3000"</span>,</div><div class="line">  <span class="string">"port"</span>: <span class="number">8000</span>,<span class="comment">//代理端口</span></div></pre></td></tr></table></figure></p>
+<p>添加package.json 的脚步运行命令：<br>“browser”: “browser-sync start –config bs-config.js”，<br>3000端口的页面即被8000代理，并使用了自己的服务器监听了所有文件改动，及时刷新页面</p>
 
           
         
@@ -1173,7 +973,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/express使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/跨域/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -1192,7 +992,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/express使用/" itemprop="url">express使用</a></h1>
+                <a class="post-title-link" href="/跨域/" itemprop="url">跨域</a></h1>
         
 
         <div class="post-meta">
@@ -1204,8 +1004,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T18:34:53+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T21:05:49+08:00">
+                2017-07-31
               </time>
             
 
@@ -1241,9 +1041,121 @@
       
         
           
-            <p>Expres是node.js主流的框架之一，（其公司还开发koa框架）。<br>简单理解是对node.js中API的又一次封装，使其开发更简单。</p>
-<p>express生成器可以快速搭建项目骨架，目前已经从现有版本（4X版本）分离出去，需要额外的安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install express -g</div><div class="line">npm install express-generator -g//安装生成器</div><div class="line"></div><div class="line">express  xxx //利用生成器生成项目目录</div></pre></td></tr></table></figure></p>
-<p>目录大体分析：<br>app.js 是程序入口文件<br>bin 项目启动文件<br>package.json 关于依赖信息<br>public 存放公共文件<br>routes 关于逻辑处理的程序<br>views 视图文件存放</p>
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/requestAnimationFrame/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/requestAnimationFrame/" itemprop="url">requestAnimationFrame</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T21:04:14+08:00">
+                2017-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一直使用setTimeout和setInterval写动画，而requestAnimationFrame是专门为动画设计的api。</p>
+<p>大多数电脑显示器的刷新频率是60Hz，大概相当于每秒钟重绘60次。最平滑动画的最佳循环间隔是1000ms/60，约等于16.6ms。</p>
+<p>requestAnimationFrame采用系统时间间隔，保持最佳绘制效率，使用动画卡顿不流畅，让各种网页动画效果能够有一个统一的刷新机制，从而节省系统资源，提高系统性能，改善视觉效果</p>
+<p>转一个通用动画定时器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">(function() &#123;</div><div class="line">    var lastTime = 0;</div><div class="line">    var vendors = [&apos;webkit&apos;, &apos;moz&apos;];</div><div class="line">    for(var x = 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) &#123;</div><div class="line">        window.requestAnimationFrame = window[vendors[x] + &apos;RequestAnimationFrame&apos;];</div><div class="line">        window.cancelAnimationFrame = window[vendors[x] + &apos;CancelAnimationFrame&apos;] ||    // name has changed in Webkit</div><div class="line">                                      window[vendors[x] + &apos;CancelRequestAnimationFrame&apos;];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (!window.requestAnimationFrame) &#123;</div><div class="line">        window.requestAnimationFrame = function(callback, element) &#123;</div><div class="line">            var currTime = new Date().getTime();</div><div class="line">            var timeToCall = Math.max(0, 16.7 - (currTime - lastTime));</div><div class="line">            var id = window.setTimeout(function() &#123;</div><div class="line">                callback(currTime + timeToCall);</div><div class="line">            &#125;, timeToCall);</div><div class="line">            lastTime = currTime + timeToCall;</div><div class="line">            return id;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    if (!window.cancelAnimationFrame) &#123;</div><div class="line">        window.cancelAnimationFrame = function(id) &#123;</div><div class="line">            clearTimeout(id);</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;());</div></pre></td></tr></table></figure></p>
 
           
         
@@ -1287,7 +1199,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/关于node-js事件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/atom-使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -1306,7 +1218,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/关于node-js事件/" itemprop="url">关于node.js事件</a></h1>
+                <a class="post-title-link" href="/atom-使用/" itemprop="url">atom 使用</a></h1>
         
 
         <div class="post-meta">
@@ -1318,8 +1230,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T17:59:32+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T19:26:09+08:00">
+                2017-07-31
               </time>
             
 
@@ -1355,12 +1267,123 @@
       
         
           
-            <p>关于nodejs 现有的理解</p>
-<p>JavaScript语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。那么，为什么JavaScript不能有多个线程呢？</p>
-<p>JavaScript的单线程，与它的用途有关。作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程再某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？</p>
-<p>所以，为了避免复杂性，从一诞生，JavaScript就是单线程，这已经成了这门语言的核心特征，将来也不会改变。</p>
-<p>为了利用多核CPU的计算能力，HTML5提出Web Worker标准，运行JavaScript脚本创建多个线程，但是子线程完全受主线程控制，且不得操作DOM。所以，这个新标准并没有改变JavaScript单线程的本质。</p>
-<p>nodejs是一种基于回调的运行方式，简单来说它将所有的事件推入到一个事件对列中，</p>
+            <p><a href="https://atom.io/" target="_blank" rel="external">Atom</a>,由github公司开源的编辑器，个人使用体会(与sublime text比较)，<br>优点：界面好看，可定制化高，插件丰富，设置方便<br>缺点：插件多了后启动严重占用内存，开启缓慢</p>
+<p>大体功能与sublime text相似，自身集成了包管理器，直接进入菜单下面的install功能页就能搜索需要的包。可显示包的一些信息，安装完成后，可以直接在管理器中可视化界面对每个插件进行设置。(sublime 需要设置代码)</p>
+<p>弃用….</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/sublime-text-使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/sublime-text-使用/" itemprop="url">sublime text 使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T18:55:48+08:00">
+                2017-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime text</a> 小巧方便，扩展性也很强<br>安装向对应的版本后，更加灵活的使用需要借助包管理组件<br>安装<a href="https://packagecontrol.io" target="_blank" rel="external">Package Control</a>,打开sublime text,按 ‘ctrl + `’打开控制台，在控制台贴入命令(适用于3x版本)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import urllib.request,os,hashlib; h = &apos;df21e130d211cfc94d9b0905775a7c0f&apos; + &apos;1e3d39e33b79698005270310898eea76&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</div></pre></td></tr></table></figure></p>
+<p>稍等，按’shift + ctrl + p’ 可弹出Package Control对话框即安装成功.<br>在对话框中可以输入<br>install Package 查找需要安装的插件<br>list packages 查看已经安装插件列表<br>…</p>
+<p>插件整理：<br>Emmet<br>提高编写速度。<br>SublimeCodeIntel<br>代码提示工具<br>BracketHighlighter<br>成对匹配增强，并修改括号等的颜色<br>DocBlockr<br>快速注释<br>ColorPicker<br>颜色获取<br>Can I Use<br>看到当前属性的浏览器支持情况。<br>AutoFileName<br>自动提示路径插件<br>A File Icon<br>文件支持图标<br>color Hightlighter<br>高亮颜色<br>…<br>其他可以安装使支持更多语言如(sass, vue ..)</p>
 
           
         
@@ -1399,7 +1422,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1444,7 +1467,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
