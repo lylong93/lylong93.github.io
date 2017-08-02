@@ -1041,7 +1041,11 @@
       
         
           
-            
+            <p>跨域是浏览器的限制（浏览器的同源策略），其实后端程序没有跨域的限制</p>
+<h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><p>jsonp： json padding<br>就是将json数据添加到一个box中<br>由于<stript>标签加载时并没有跨域的限制，所以将一段程序放入标签中，并提供回调函数来接受数据，将json数据接受到，即可对json数据进行解析使用。</stript></p>
+<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>开发中可以在服务器中设置一个代理，代理去访问其他端口的数据，在将数据返回到本端口，如vue-cli中设置代理: (/config/index.js)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">dev: &#123;</div><div class="line">    ....</div><div class="line">    ...</div><div class="line">    <span class="comment">//配置跨域代理</span></div><div class="line">    proxyTable: &#123;</div><div class="line">        <span class="string">'/xx'</span>: &#123;  <span class="comment">// 本地名称</span></div><div class="line">            target: <span class="string">"http://xxxxx"</span>,<span class="comment">//需要代理的地址</span></div><div class="line">            changeOrigin: <span class="literal">true</span>,</div><div class="line">            <span class="attr">pathRewrite</span>: &#123;</div><div class="line">                <span class="string">'^/xx'</span>: <span class="string">'/'</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
+<h2 id="Allow-Control-Allow-Origin"><a href="#Allow-Control-Allow-Origin" class="headerlink" title="Allow-Control-Allow-Origin"></a>Allow-Control-Allow-Origin</h2><p>chrome浏览器的一个插件，可以关闭跨域的限制</p>
+
           
         
       
