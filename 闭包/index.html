@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="MongoDB 使用c++语言编写的NoSql(‘不仅仅是sql’)数据库之一，它提出非关系型数据库。最大的特点是高度扩展和灵活。其数据类似于json。 安装进入官网下载安装包进行安装。在计算机中一个盘根目录下新建一个如c:data/db文件作为数据库数据文件。进入目录下使用命令行输入 mongod 显示 ok 说明数据库成功运行。打开另一个命名行 输入mongo 即可以进入操作行。 基本命令sh">
+<meta name="description" content="对js闭包的理解 什么是闭包闭包就是利用了作用域链形成的一个变量的引用,每一个函数其实都是一个闭包12345678910function foo() &amp;#123;    var a = 1;    function fn() &amp;#123;        a = a + 1;        console.log(a);    &amp;#125;    return fn;&amp;#125;var test=">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB使用">
-<meta property="og:url" content="http://yoursite.com/MongoDB使用/index.html">
+<meta property="og:title" content="闭包">
+<meta property="og:url" content="http://yoursite.com/闭包/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="MongoDB 使用c++语言编写的NoSql(‘不仅仅是sql’)数据库之一，它提出非关系型数据库。最大的特点是高度扩展和灵活。其数据类似于json。 安装进入官网下载安装包进行安装。在计算机中一个盘根目录下新建一个如c:data/db文件作为数据库数据文件。进入目录下使用命令行输入 mongod 显示 ok 说明数据库成功运行。打开另一个命名行 输入mongo 即可以进入操作行。 基本命令sh">
-<meta property="og:updated_time" content="2017-07-29T13:14:19.783Z">
+<meta property="og:description" content="对js闭包的理解 什么是闭包闭包就是利用了作用域链形成的一个变量的引用,每一个函数其实都是一个闭包12345678910function foo() &amp;#123;    var a = 1;    function fn() &amp;#123;        a = a + 1;        console.log(a);    &amp;#125;    return fn;&amp;#125;var test=">
+<meta property="og:updated_time" content="2017-08-03T09:22:28.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MongoDB使用">
-<meta name="twitter:description" content="MongoDB 使用c++语言编写的NoSql(‘不仅仅是sql’)数据库之一，它提出非关系型数据库。最大的特点是高度扩展和灵活。其数据类似于json。 安装进入官网下载安装包进行安装。在计算机中一个盘根目录下新建一个如c:data/db文件作为数据库数据文件。进入目录下使用命令行输入 mongod 显示 ok 说明数据库成功运行。打开另一个命名行 输入mongo 即可以进入操作行。 基本命令sh">
+<meta name="twitter:title" content="闭包">
+<meta name="twitter:description" content="对js闭包的理解 什么是闭包闭包就是利用了作用域链形成的一个变量的引用,每一个函数其实都是一个闭包12345678910function foo() &amp;#123;    var a = 1;    function fn() &amp;#123;        a = a + 1;        console.log(a);    &amp;#125;    return fn;&amp;#125;var test=">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/MongoDB使用/"/>
+  <link rel="canonical" href="http://yoursite.com/闭包/"/>
 
 
 
 
 
-  <title>MongoDB使用 | blog</title>
+  <title>闭包 | blog</title>
   
 
 
@@ -255,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/MongoDB使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/闭包/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yoghurt">
@@ -272,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MongoDB使用</h1>
+          <h1 class="post-title" itemprop="name headline">闭包</h1>
         
 
         <div class="post-meta">
@@ -284,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T20:43:48+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-03T10:51:26+08:00">
+                2017-08-03
               </time>
             
 
@@ -319,9 +319,12 @@
       
 
       
-        <p>MongoDB 使用c++语言编写的NoSql(‘不仅仅是sql’)数据库之一，它提出非关系型数据库。最大的特点是高度扩展和灵活。其数据类似于json。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>进入<a href="https://www.mongodb.com/" target="_blank" rel="external">官网</a>下载安装包进行安装。<br>在计算机中一个盘根目录下新建一个如c:data/db文件作为数据库数据文件。<br>进入目录下使用命令行输入 mongod 显示 ok 说明数据库成功运行。<br>打开另一个命名行 输入mongo 即可以进入操作行。</p>
-<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><p>show dbs 查看所有数据库以及使用量，local数据库是系统本身创建。<br>use xxx(数据库名) 显示 switched to db xxx 选择使用哪一个数据库<br>show collections 显示当前数据库中的集合<br>db.xxx.drop() 删除xxx集合<br>db.dropDatabase() 删除当前数据库<br>其他增删改查类似其他数据库</p>
+        <p>对js闭包的理解</p>
+<h2 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h2><p>闭包就是利用了作用域链形成的一个变量的引用,每一个函数其实都是一个闭包<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        a = a + <span class="number">1</span>;</div><div class="line">        <span class="built_in">console</span>.log(a);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> fn;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> test= foo(); <span class="comment">//这里的test其实等于函数fn</span></div><div class="line">test(); <span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
+<p>一般为简介将内部的函数写成自执行函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        a = a + <span class="number">1</span>;</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line">        &#125;()</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> test = foo(); </div><div class="line">test <span class="comment">//2</span></div></pre></td></tr></table></figure></p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>1.由于foo中的内部变量被内部匿名函数引用，又被传递到外部变量test使用，所以不会立刻被垃圾回收机制回收，当不再引用时才会回收。这样就维持了一个变量。<br>2.foo中的变量只能由它的内部函数访问，外部无法访问，这样就保护了属性a</p>
+<h2 id="关于内存"><a href="#关于内存" class="headerlink" title="关于内存"></a>关于内存</h2><p>在ie浏览器中如果闭包中一直保存一些DOM节点，回收机制采用计数回收时（记录引用的次数，当数变为0时就会被回收），一些未知原因并不能准确更新了DOM节点的计数，导致了无法回收而发生了内存泄漏。</p>
+<p>好像ie已修复。。</p>
 
       
     </div>
@@ -358,8 +361,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/express使用/" rel="next" title="express使用">
-                <i class="fa fa-chevron-left"></i> express使用
+              <a href="/this/" rel="next" title="this">
+                <i class="fa fa-chevron-left"></i> this
               </a>
             
           </div>
@@ -367,10 +370,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/github上传/" rel="prev" title="github上传">
-                github上传 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -499,7 +498,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本命令"><span class="nav-number">2.</span> <span class="nav-text">基本命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是闭包"><span class="nav-number">1.</span> <span class="nav-text">什么是闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于内存"><span class="nav-number">3.</span> <span class="nav-text">关于内存</span></a></li></ol></div>
             
 
           </div>
