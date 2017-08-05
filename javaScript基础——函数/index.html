@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="##函数的定义函数声明和函数表达式函数声明：function a() {}函数表达式：var x = function {}一般为匿名函数，12345678910//方便递归var f = function start(x) &amp;#123;  if(x &amp;gt; 5) &amp;#123;    return x;  &amp;#125;else&amp;#123;    return start(x + 1);  &amp;#1">
+<meta name="description" content="##函数的定义 函数声明和函数表达式函数声明：function a() {}函数表达式：var x = function {}一般为匿名函数，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javaScript基础——函数">
 <meta property="og:url" content="http://yoursite.com/javaScript基础——函数/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="##函数的定义函数声明和函数表达式函数声明：function a() {}函数表达式：var x = function {}一般为匿名函数，12345678910//方便递归var f = function start(x) &amp;#123;  if(x &amp;gt; 5) &amp;#123;    return x;  &amp;#125;else&amp;#123;    return start(x + 1);  &amp;#1">
-<meta property="og:updated_time" content="2017-07-14T13:07:08.397Z">
+<meta property="og:description" content="##函数的定义 函数声明和函数表达式函数声明：function a() {}函数表达式：var x = function {}一般为匿名函数，">
+<meta property="og:updated_time" content="2017-08-05T15:06:43.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javaScript基础——函数">
-<meta name="twitter:description" content="##函数的定义函数声明和函数表达式函数声明：function a() {}函数表达式：var x = function {}一般为匿名函数，12345678910//方便递归var f = function start(x) &amp;#123;  if(x &amp;gt; 5) &amp;#123;    return x;  &amp;#125;else&amp;#123;    return start(x + 1);  &amp;#1">
+<meta name="twitter:description" content="##函数的定义 函数声明和函数表达式函数声明：function a() {}函数表达式：var x = function {}一般为匿名函数，">
 
 
 
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -319,15 +341,15 @@
       
 
       
-        <p>##函数的定义<br>函数声明和函数表达式<br>函数声明：<br>function a() {}<br>函数表达式：<br>var x = function {}<br>一般为匿名函数，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方便递归</span></div><div class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span>(x &gt; <span class="number">5</span>) &#123;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="keyword">return</span> start(x + <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(f(<span class="number">1</span>));<span class="comment">//6</span></div><div class="line"><span class="comment">// start函数名成为函数内部的一个局部变量</span></div></pre></td></tr></table></figure></p>
-<p>##函数作用域<br>js没有块级作用域（花括号），只有函数作用域。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(a);<span class="comment">//undefined , 申明变量a并提前到函数体上面并赋值为undefined</span></div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;     <span class="comment">// 变量a赋值为1</span></div><div class="line">  <span class="built_in">console</span>.log(a);<span class="comment">// 1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>##函数调用<br>作为函数，普通调用<br>作为方法，可以设计链式调用(jQuery源码设计)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> test = &#123;</div><div class="line">  <span class="attr">a</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">b</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">test.a().b()</div></pre></td></tr></table></figure></p>
+        <p>##函数的定义</p>
+<p>函数声明和函数表达式<br>函数声明：<br>function a() {}<br>函数表达式：<br>var x = function {}<br>一般为匿名函数，<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方便递归</span></div><div class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span>(x &gt; <span class="number">5</span>) &#123;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="keyword">return</span> start(x + <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(f(<span class="number">1</span>));<span class="comment">//6</span></div><div class="line"><span class="comment">// start函数名成为函数内部的一个局部变量</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h2><p>js没有块级作用域（花括号），只有函数作用域。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(a);<span class="comment">//undefined , 申明变量a并提前到函数体上面并赋值为undefined</span></div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;     <span class="comment">// 变量a赋值为1</span></div><div class="line">  <span class="built_in">console</span>.log(a);<span class="comment">// 1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h2><p>作为函数，普通调用<br>作为方法，可以设计链式调用(jQuery源码设计)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> test = &#123;</div><div class="line">  <span class="attr">a</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">b</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">test.a().b()</div></pre></td></tr></table></figure></p>
 <p>构造函数,<br>间接调用<br>函数的call()方法和apply()方法</p>
-<p>##函数参数<br>省略的定义为undefind, 多余的自动省略<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line">&#125;</div><div class="line">test();<span class="comment">//undefined</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h2><p>省略的定义为undefind, 多余的自动省略<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line">&#125;</div><div class="line">test();<span class="comment">//undefined</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);<span class="comment">//3</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">0</span>]);<span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(test.length);<span class="comment">//2</span></div><div class="line">&#125;</div><div class="line">test(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line"><span class="comment">//arguments是类数组,包括传入的参数，严格模式('use strict')下只读</span></div><div class="line"><span class="comment">//arguments只有一个属性length</span></div><div class="line"><span class="comment">//arguments.length 实参个数</span></div><div class="line"><span class="comment">//test.length 形参个数</span></div></pre></td></tr></table></figure>
 <p>js是弱语言类型，传入参数时不做任何类型检测，有必要时需要自我定义<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">num</span>) </span>&#123;</div><div class="line"> <span class="keyword">if</span>(<span class="keyword">typeof</span>(num) === <span class="string">'number'</span>)&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'ok'</span>);</div><div class="line"> &#125;<span class="keyword">else</span> &#123;</div><div class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span> (<span class="string">"this no a number"</span>)</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//传入必须为number类型</span></div></pre></td></tr></table></figure></p>
-<p>##命名空间和闭包</p>
-<p>##函数记忆<br>是一种编程技巧,将上一次的计算结果放在闭包中,下一次去查找,实现’记忆’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fibonacci = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> memo = [<span class="number">0</span>, <span class="number">1</span>]; </div><div class="line">    <span class="keyword">var</span> fib = <span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> result = memo[n];</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> result !== <span class="string">'number'</span>) &#123;</div><div class="line">        <span class="comment">//判断语句，防止无限递归导致栈溢出</span></div><div class="line">            result = fib(n - <span class="number">1</span>) + fib(n - <span class="number">2</span>);</div><div class="line">            memo[n] = result;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> fib;</div><div class="line">&#125;();</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;=<span class="number">5</span>;i++)&#123;</div><div class="line">    <span class="built_in">console</span>.log(fibonacci(i))</div><div class="line">&#125;</div><div class="line"><span class="comment">//0,1,1,2,3,5</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数记忆"><a href="#函数记忆" class="headerlink" title="函数记忆"></a>函数记忆</h2><p>是一种编程技巧,将上一次的计算结果放在闭包中,下一次去查找,实现’记忆’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fibonacci = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> memo = [<span class="number">0</span>, <span class="number">1</span>]; </div><div class="line">    <span class="keyword">var</span> fib = <span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> result = memo[n];</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> result !== <span class="string">'number'</span>) &#123;</div><div class="line">        <span class="comment">//判断语句，防止无限递归导致栈溢出</span></div><div class="line">            result = fib(n - <span class="number">1</span>) + fib(n - <span class="number">2</span>);</div><div class="line">            memo[n] = result;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">return</span> fib;</div><div class="line">&#125;();</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;=<span class="number">5</span>;i++)&#123;</div><div class="line">    <span class="built_in">console</span>.log(fibonacci(i))</div><div class="line">&#125;</div><div class="line"><span class="comment">//0,1,1,2,3,5</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -423,8 +445,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -439,7 +470,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -450,7 +481,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -486,6 +517,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数作用域"><span class="nav-number">1.</span> <span class="nav-text">函数作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数调用"><span class="nav-number">2.</span> <span class="nav-text">函数调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数参数"><span class="nav-number">3.</span> <span class="nav-text">函数参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数记忆"><span class="nav-number">4.</span> <span class="nav-text">函数记忆</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/事件特性/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="js事件流程是从事件捕获-&amp;gt;目标事件-&amp;gt;冒泡事件旧ie内核默认只有事件冒泡事件冒泡是自下而上的执行目标DOM外其他的dom事件，捕获反之1234567891011121314151617181920212223242526272829303132//chrome浏览器&amp;lt;div id=&quot;o1&quot;&amp;gt;  &amp;lt;div id=&quot;o2&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div">
-<meta property="og:updated_time" content="2017-07-30T13:08:12.056Z">
+<meta property="og:updated_time" content="2017-08-05T15:04:09.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事件特性">
 <meta name="twitter:description" content="js事件流程是从事件捕获-&amp;gt;目标事件-&amp;gt;冒泡事件旧ie内核默认只有事件冒泡事件冒泡是自下而上的执行目标DOM外其他的dom事件，捕获反之1234567891011121314151617181920212223242526272829303132//chrome浏览器&amp;lt;div id=&quot;o1&quot;&amp;gt;  &amp;lt;div id=&quot;o2&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div">
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深入js/" itemprop="url" rel="index">
+                    <span itemprop="name">深入js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -320,6 +342,7 @@
 
       
         <p>js事件流程是从事件捕获-&gt;目标事件-&gt;冒泡事件<br>旧ie内核默认只有事件冒泡<br>事件冒泡是自下而上的执行目标DOM外其他的dom事件，捕获反之<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">//chrome浏览器</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"o1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"o2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> odiv = <span class="built_in">document</span>.getElementById(id);</div><div class="line">    <span class="keyword">return</span> odiv;</div><div class="line">  &#125;</div><div class="line">  $(<span class="string">"o1"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o1'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line">  $(<span class="string">"o2"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o2'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">//点击内层元素 依次打印了'o2'和'o1',发生了冒泡,</div><div class="line">//addEventListener的最后一个参数可以定义事件发生是在冒泡阶段(false)还是捕获阶段(true);</div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> odiv = <span class="built_in">document</span>.getElementById(id);</div><div class="line">    <span class="keyword">return</span> odiv;</div><div class="line">  &#125;</div><div class="line">  $(<span class="string">"o1"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o1'</span>);</div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line">  $(<span class="string">"o2"</span>).addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'o2'</span>);</div><div class="line">    event.stopPropagation();<span class="comment">//不派发事件。可阻止冒泡</span></div><div class="line">  &#125;,<span class="literal">false</span>)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">//点击只打印 o2</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h2 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h2><p>根据冒泡的特性可以将子节点的事件都委托到父节点，提高性能，简化代码<br>一个简单通用事件代理：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">elem:绑定事件的dom type:事件类型，selector:需要代理的dom，fn:执行函数</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindEvnet</span>(<span class="params">elem, type, selector, fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (fn === <span class="literal">null</span>) &#123;</div><div class="line">    fn = selector</div><div class="line">    selector = <span class="literal">null</span></div><div class="line">  &#125; <span class="comment">// 如果不传入第三个参数,调整参数</span></div><div class="line">  elem.addEventListener(type, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> target;</div><div class="line">    <span class="keyword">if</span> (selector) &#123;</div><div class="line">      target = e.target;</div><div class="line">      <span class="comment">//Element.matches函数可以精准匹配</span></div><div class="line">      <span class="keyword">if</span>(target.matches(selector)) &#123;</div><div class="line">        fn.call(target, e)</div><div class="line">        <span class="comment">// 使用call函数将触发的dom可绑为this，方便使用</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">      fn(e)</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="其他事件类型"><a href="#其他事件类型" class="headerlink" title="其他事件类型"></a>其他事件类型</h2><p>列表<a href="http://www.w3school.com.cn/jsref/dom_obj_event.asp" target="_blank" rel="external">w3school</a><br>可以用 mouseenter 和 mouserleave 默认不触发冒泡的鼠标移入移出（但未标准化）</p>
 <h2 id="Event的常用其他属性和方法"><a href="#Event的常用其他属性和方法" class="headerlink" title="Event的常用其他属性和方法"></a>Event的常用其他属性和方法</h2><p>preventDefault<br>可以阻止默认行为，如from表单中的button默认作为提交，a标签的默认链接行为。<br>target<br>返回触发事件的DOM<br>currentTarget<br>永远返回绑定了监听函数的DOM</p>
@@ -443,7 +466,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -454,7 +477,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

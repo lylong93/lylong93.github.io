@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/this/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="作用域js没有块级作用域，其他语言中花括号就是一个块级作用域，12345if(true)&amp;#123;   var name = &apos;kkk&apos;;&amp;#125; console.log(name);//可以访问 但有函数作用域和全局作用域123456var a = 1;//全局作用域function fn () &amp;#123;    var b = 2; //函数作用域&amp;#125;console.log(b">
-<meta property="og:updated_time" content="2017-08-01T13:37:36.598Z">
+<meta property="og:updated_time" content="2017-08-05T15:07:52.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this">
 <meta name="twitter:description" content="作用域js没有块级作用域，其他语言中花括号就是一个块级作用域，12345if(true)&amp;#123;   var name = &apos;kkk&apos;;&amp;#125; console.log(name);//可以访问 但有函数作用域和全局作用域123456var a = 1;//全局作用域function fn () &amp;#123;    var b = 2; //函数作用域&amp;#125;console.log(b">
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深入js/" itemprop="url" rel="index">
+                    <span itemprop="name">深入js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -321,6 +343,7 @@
       
         <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>js没有块级作用域，其他语言中花括号就是一个块级作用域，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</div><div class="line">   <span class="keyword">var</span> name = <span class="string">'kkk'</span>;</div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name);<span class="comment">//可以访问</span></div></pre></td></tr></table></figure></p>
 <p>但有函数作用域和全局作用域<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;<span class="comment">//全局作用域</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> b = <span class="number">2</span>; <span class="comment">//函数作用域</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(b);<span class="comment">//报错</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>作用域链<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;<span class="comment">//全局作用域</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(a);<span class="comment">//沿着作用域链查找</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>作用域链就是沿变量定义时(不是执行时)的父级域形成</p>
 <h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>this是执行时指向的执行上下文<br>作为普通对象执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>)</div><div class="line">&#125;</div><div class="line">fn(); <span class="comment">// window ,浏览器中指向全局window</span></div></pre></td></tr></table></figure></p>
@@ -448,7 +471,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -459,7 +482,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

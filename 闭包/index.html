@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/闭包/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="对js闭包的理解 什么是闭包闭包就是利用了作用域链形成的一个变量的引用,每一个函数其实都是一个闭包12345678910function foo() &amp;#123;    var a = 1;    function fn() &amp;#123;        a = a + 1;        console.log(a);    &amp;#125;    return fn;&amp;#125;var test=">
-<meta property="og:updated_time" content="2017-08-03T09:22:28.069Z">
+<meta property="og:updated_time" content="2017-08-05T15:05:50.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="闭包">
 <meta name="twitter:description" content="对js闭包的理解 什么是闭包闭包就是利用了作用域链形成的一个变量的引用,每一个函数其实都是一个闭包12345678910function foo() &amp;#123;    var a = 1;    function fn() &amp;#123;        a = a + 1;        console.log(a);    &amp;#125;    return fn;&amp;#125;var test=">
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深入js/" itemprop="url" rel="index">
+                    <span itemprop="name">深入js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -321,6 +343,7 @@
       
         <p>对js闭包的理解</p>
 <h2 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h2><p>闭包就是利用了作用域链形成的一个变量的引用,每一个函数其实都是一个闭包<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        a = a + <span class="number">1</span>;</div><div class="line">        <span class="built_in">console</span>.log(a);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> fn;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> test= foo(); <span class="comment">//这里的test其实等于函数fn</span></div><div class="line">test(); <span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>一般为简介将内部的函数写成自执行函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        a = a + <span class="number">1</span>;</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line">        &#125;()</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> test = foo(); </div><div class="line">test <span class="comment">//2</span></div></pre></td></tr></table></figure></p>
 <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>1.由于foo中的内部变量被内部匿名函数引用，又被传递到外部变量test使用，所以不会立刻被垃圾回收机制回收，当不再引用时才会回收。这样就维持了一个变量。<br>2.foo中的变量只能由它的内部函数访问，外部无法访问，这样就保护了属性a</p>
 <h2 id="关于内存"><a href="#关于内存" class="headerlink" title="关于内存"></a>关于内存</h2><p>在ie浏览器中如果闭包中一直保存一些DOM节点，回收机制采用计数回收时（记录引用的次数，当数变为0时就会被回收），一些未知原因并不能准确更新了DOM节点的计数，导致了无法回收而发生了内存泄漏。</p>
@@ -370,6 +393,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/canvas/" rel="prev" title="canvas">
+                canvas <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -441,7 +468,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -452,7 +479,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

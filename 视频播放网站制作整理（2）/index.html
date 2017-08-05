@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/视频播放网站制作整理（2）/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="详细实现 文件管理上传模块使用multer插件，multer可配置上传的路径和上传文件的名称格式，在表单提交的路由中使用upload.fields可以获得上传文件(获得一个类json数据)的名称，将名称路径存入数据库。 监听管理使用了video库，js设置监听函数，开始播放时监听timeupdate事件，设置问题时点击可以调用暂定事件。每次点击添加，即在form表单中创建两个input放入文本和时">
-<meta property="og:updated_time" content="2017-07-31T16:01:47.682Z">
+<meta property="og:updated_time" content="2017-08-05T15:05:32.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="视频播放网站制作整理（2）">
 <meta name="twitter:description" content="详细实现 文件管理上传模块使用multer插件，multer可配置上传的路径和上传文件的名称格式，在表单提交的路由中使用upload.fields可以获得上传文件(获得一个类json数据)的名称，将名称路径存入数据库。 监听管理使用了video库，js设置监听函数，开始播放时监听timeupdate事件，设置问题时点击可以调用暂定事件。每次点击添加，即在form表单中创建两个input放入文本和时">
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/实例/" itemprop="url" rel="index">
+                    <span itemprop="name">实例</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -321,7 +343,7 @@
       
         <p>详细实现</p>
 <h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><p>上传模块使用multer插件，multer可配置上传的路径和上传文件的名称格式，在表单提交的路由中使用upload.fields可以获得上传文件(获得一个类json数据)的名称，将名称路径存入数据库。</p>
-<h2 id="监听管理"><a href="#监听管理" class="headerlink" title="监听管理"></a>监听管理</h2><p>使用了video库，js设置监听函数，开始播放时监听timeupdate事件，设置问题时点击可以调用暂定事件。每次点击添加，即在form表单中创建两个input放入文本和时间(隐藏起来)，提交经过路由存在数据库。</p>
+<h2 id="监听管理"><a href="#监听管理" class="headerlink" title="监听管理"></a>监听管理</h2><p>使用了video库，js设置监听函数，开始播放时监听timeupdate事件，设置问题时点击可以调用暂定事件。每次点击添加，即在form表单中创建两个input放入文本和时间(隐藏起来)，提交经过路由存在数据库。<br><a id="more"></a></p>
 <h2 id="互动管理"><a href="#互动管理" class="headerlink" title="互动管理"></a>互动管理</h2><p>播放时同样监听了播放器的timeupdate事件，并在视频加载时就使用ajax查找了设置的问题，循环数组与timeupdate对比，因为time时间更新没有固定规律，将对比的时间放在一个误差范围内（0.5s）,执行弹窗事件。</p>
 <h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><p>用户的登录使用bcryptjs加密模块，需要写在用户模型中，作为一个处理中间件。Mongoose中间件的使用pre(‘xxx’,function)，监听模型的xxx事件。</p>
 <h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><p>使用express-session和cookie一起配合使用，将session的数据存储在数据库，而将id作为一个cookie调用到浏览器中，验证使用。<br>connect-mongo模块用于将session存入mongo中</p>
@@ -445,7 +467,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -456,7 +478,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

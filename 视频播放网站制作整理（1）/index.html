@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="记录视频网站制作过程 需求项目的目的是制作一个可互动式的教育网站，加强教学管理。 实现思路管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看， 使用技术主要架构node.js , mongodb , sass , jade工程自动化nodemon (自动重启node)Browser-sync (浏览器热更新) 项目构建1，使用了">
+<meta name="description" content="记录视频网站制作过程 需求项目的目的是制作一个可互动式的教育网站，加强教学管理。 实现思路管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看， 使用技术主要架构node.js , mongodb , sass , jade工程自动化nodemon (自动重启node)Browser-sync (浏览器热更新)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="视频播放网站制作整理（1）">
 <meta property="og:url" content="http://yoursite.com/视频播放网站制作整理（1）/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="记录视频网站制作过程 需求项目的目的是制作一个可互动式的教育网站，加强教学管理。 实现思路管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看， 使用技术主要架构node.js , mongodb , sass , jade工程自动化nodemon (自动重启node)Browser-sync (浏览器热更新) 项目构建1，使用了">
-<meta property="og:updated_time" content="2017-07-31T13:39:36.872Z">
+<meta property="og:description" content="记录视频网站制作过程 需求项目的目的是制作一个可互动式的教育网站，加强教学管理。 实现思路管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看， 使用技术主要架构node.js , mongodb , sass , jade工程自动化nodemon (自动重启node)Browser-sync (浏览器热更新)">
+<meta property="og:updated_time" content="2017-08-05T15:05:23.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="视频播放网站制作整理（1）">
-<meta name="twitter:description" content="记录视频网站制作过程 需求项目的目的是制作一个可互动式的教育网站，加强教学管理。 实现思路管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看， 使用技术主要架构node.js , mongodb , sass , jade工程自动化nodemon (自动重启node)Browser-sync (浏览器热更新) 项目构建1，使用了">
+<meta name="twitter:description" content="记录视频网站制作过程 需求项目的目的是制作一个可互动式的教育网站，加强教学管理。 实现思路管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看， 使用技术主要架构node.js , mongodb , sass , jade工程自动化nodemon (自动重启node)Browser-sync (浏览器热更新)">
 
 
 
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/实例/" itemprop="url" rel="index">
+                    <span itemprop="name">实例</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -322,7 +344,7 @@
         <p>记录视频网站制作过程</p>
 <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>项目的目的是制作一个可互动式的教育网站，加强教学管理。</p>
 <h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，<br>用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看，</p>
-<h2 id="使用技术"><a href="#使用技术" class="headerlink" title="使用技术"></a>使用技术</h2><p>主要架构<br>node.js , mongodb , sass , jade<br>工程自动化<br>nodemon (自动重启node)<br>Browser-sync (浏览器热更新)</p>
+<h2 id="使用技术"><a href="#使用技术" class="headerlink" title="使用技术"></a>使用技术</h2><p>主要架构<br>node.js , mongodb , sass , jade<br>工程自动化<br>nodemon (自动重启node)<br>Browser-sync (浏览器热更新)<br><a id="more"></a></p>
 <h2 id="项目构建"><a href="#项目构建" class="headerlink" title="项目构建"></a>项目构建</h2><p>1，使用了express 框架，并使用express生成器快速搭建项目结构<br>2，修改项目入口文件模板引用，app.js文件中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'pug'</span>);<span class="comment">//修改视图文件 默认的是ejs</span></div><div class="line">                              <span class="comment">// jade已经改名为pug</span></div></pre></td></tr></table></figure></p>
 <p>3，使用npm安装nodemon，启动命令直接’nodemon’可以在修改了服务文件后自动重启node服务<br>4，安装 <a href="http://www.browsersync.cn/" target="_blank" rel="external">browsersync</a>,配置项目下的bs-config.js文件,主要配置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> <span class="string">"files"</span>: <span class="string">"**"</span>,</div><div class="line">  <span class="string">"watchEvents"</span>: [</div><div class="line">    <span class="string">"change"</span></div><div class="line">  ],</div><div class="line"> <span class="comment">//监听所有文件的改动</span></div><div class="line"><span class="string">"proxy"</span>: <span class="string">"localhost:3000"</span>,</div><div class="line">  <span class="string">"port"</span>: <span class="number">8000</span>,<span class="comment">//代理端口</span></div></pre></td></tr></table></figure></p>
 <p>添加package.json 的脚步运行命令：<br>“browser”: “browser-sync start –config bs-config.js”，<br>3000端口的页面即被8000代理，并使用了自己的服务器监听了所有文件改动，及时刷新页面</p>
@@ -446,7 +468,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -457,7 +479,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

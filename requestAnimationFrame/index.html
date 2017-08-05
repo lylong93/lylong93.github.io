@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/requestAnimationFrame/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="一直使用setTimeout和setInterval写动画，而requestAnimationFrame是专门为动画设计的api。 大多数电脑显示器的刷新频率是60Hz，大概相当于每秒钟重绘60次。最平滑动画的最佳循环间隔是1000ms/60，约等于16.6ms。 requestAnimationFrame采用系统时间间隔，保持最佳绘制效率，使用动画卡顿不流畅，让各种网页动画效果能够有一个统一的刷">
-<meta property="og:updated_time" content="2017-08-01T14:55:39.393Z">
+<meta property="og:updated_time" content="2017-08-05T15:07:32.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="requestAnimationFrame">
 <meta name="twitter:description" content="一直使用setTimeout和setInterval写动画，而requestAnimationFrame是专门为动画设计的api。 大多数电脑显示器的刷新频率是60Hz，大概相当于每秒钟重绘60次。最平滑动画的最佳循环间隔是1000ms/60，约等于16.6ms。 requestAnimationFrame采用系统时间间隔，保持最佳绘制效率，使用动画卡顿不流畅，让各种网页动画效果能够有一个统一的刷">
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深入js/" itemprop="url" rel="index">
+                    <span itemprop="name">深入js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -321,8 +343,7 @@
       
         <p>一直使用setTimeout和setInterval写动画，而requestAnimationFrame是专门为动画设计的api。</p>
 <p>大多数电脑显示器的刷新频率是60Hz，大概相当于每秒钟重绘60次。最平滑动画的最佳循环间隔是1000ms/60，约等于16.6ms。</p>
-<p>requestAnimationFrame采用系统时间间隔，保持最佳绘制效率，使用动画卡顿不流畅，让各种网页动画效果能够有一个统一的刷新机制，从而节省系统资源，提高系统性能，改善视觉效果</p>
-<p>转一个通用动画定时器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">(function() &#123;</div><div class="line">    var lastTime = 0;</div><div class="line">    var vendors = [&apos;webkit&apos;, &apos;moz&apos;];</div><div class="line">    for(var x = 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) &#123;</div><div class="line">        window.requestAnimationFrame = window[vendors[x] + &apos;RequestAnimationFrame&apos;];</div><div class="line">        window.cancelAnimationFrame = window[vendors[x] + &apos;CancelAnimationFrame&apos;] ||    // name has changed in Webkit</div><div class="line">                                      window[vendors[x] + &apos;CancelRequestAnimationFrame&apos;];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (!window.requestAnimationFrame) &#123;</div><div class="line">        window.requestAnimationFrame = function(callback, element) &#123;</div><div class="line">            var currTime = new Date().getTime();</div><div class="line">            var timeToCall = Math.max(0, 16.7 - (currTime - lastTime));</div><div class="line">            var id = window.setTimeout(function() &#123;</div><div class="line">                callback(currTime + timeToCall);</div><div class="line">            &#125;, timeToCall);</div><div class="line">            lastTime = currTime + timeToCall;</div><div class="line">            return id;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    if (!window.cancelAnimationFrame) &#123;</div><div class="line">        window.cancelAnimationFrame = function(id) &#123;</div><div class="line">            clearTimeout(id);</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;());</div></pre></td></tr></table></figure></p>
+<p>requestAnimationFrame采用系统时间间隔，保持最佳绘制效率，使用动画卡顿不流畅，让各种网页动画效果能够有一个统一的刷新机制，从而节省系统资源，提高系统性能，改善视觉效果<br><a id="more"></a><br>转一个通用动画定时器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">(function() &#123;</div><div class="line">    var lastTime = 0;</div><div class="line">    var vendors = [&apos;webkit&apos;, &apos;moz&apos;];</div><div class="line">    for(var x = 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) &#123;</div><div class="line">        window.requestAnimationFrame = window[vendors[x] + &apos;RequestAnimationFrame&apos;];</div><div class="line">        window.cancelAnimationFrame = window[vendors[x] + &apos;CancelAnimationFrame&apos;] ||    // name has changed in Webkit</div><div class="line">                                      window[vendors[x] + &apos;CancelRequestAnimationFrame&apos;];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (!window.requestAnimationFrame) &#123;</div><div class="line">        window.requestAnimationFrame = function(callback, element) &#123;</div><div class="line">            var currTime = new Date().getTime();</div><div class="line">            var timeToCall = Math.max(0, 16.7 - (currTime - lastTime));</div><div class="line">            var id = window.setTimeout(function() &#123;</div><div class="line">                callback(currTime + timeToCall);</div><div class="line">            &#125;, timeToCall);</div><div class="line">            lastTime = currTime + timeToCall;</div><div class="line">            return id;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    if (!window.cancelAnimationFrame) &#123;</div><div class="line">        window.cancelAnimationFrame = function(id) &#123;</div><div class="line">            clearTimeout(id);</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;());</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -434,7 +455,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -445,7 +466,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

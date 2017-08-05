@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/字符串方法/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="字符串有length属性，返回字符串长度字符串和数组类似的方法有：concat, slice, split, indexOf, lastIndexOf,  常用字符串方法(都不改变原始字符串)toLowerCase()和toUpperCase 大小写转换12345var str = &apos;I Love you&apos;;var a = str.toLowerCase();var b = str.toUpper">
-<meta property="og:updated_time" content="2017-07-30T14:55:54.220Z">
+<meta property="og:updated_time" content="2017-08-05T15:04:56.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符串方法">
 <meta name="twitter:description" content="字符串有length属性，返回字符串长度字符串和数组类似的方法有：concat, slice, split, indexOf, lastIndexOf,  常用字符串方法(都不改变原始字符串)toLowerCase()和toUpperCase 大小写转换12345var str = &apos;I Love you&apos;;var a = str.toLowerCase();var b = str.toUpper">
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -321,6 +343,7 @@
       
         <p>字符串有length属性，返回字符串长度<br>字符串和数组类似的方法有：<br>concat, slice, split, indexOf, lastIndexOf, </p>
 <h2 id="常用字符串方法-都不改变原始字符串"><a href="#常用字符串方法-都不改变原始字符串" class="headerlink" title="常用字符串方法(都不改变原始字符串)"></a>常用字符串方法(都不改变原始字符串)</h2><p>toLowerCase()和toUpperCase 大小写转换<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'I Love you'</span>;</div><div class="line"><span class="keyword">var</span> a = str.toLowerCase();</div><div class="line"><span class="keyword">var</span> b = str.toUpperCase();</div><div class="line">a<span class="comment">// i love you</span></div><div class="line">b<span class="comment">// I LOVE YOU</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>charAt()和charCodeAt 返回指定位置字符和Unicode编码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"I Love you"</span>;</div><div class="line"><span class="keyword">var</span> a = str.charAt(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> b = str.charCodeAt(<span class="number">1</span>);</div><div class="line">a<span class="comment">// L</span></div><div class="line">b<span class="comment">// 76</span></div></pre></td></tr></table></figure></p>
 <p>match() 查找匹配的字符<br>replace() 替换匹配的字符<br>search() 查找匹配的字符起始位置<br>参数可以是正则表达式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"I Love you"</span>; </div><div class="line"><span class="keyword">var</span> reg = <span class="regexp">/o/</span>;<span class="comment">//匹配字符'o'</span></div><div class="line"><span class="keyword">var</span> a = str.match(reg);</div><div class="line"><span class="keyword">var</span> b = str.replace(reg, <span class="string">'dd'</span>);</div><div class="line"><span class="keyword">var</span> c = str.search(reg);</div><div class="line">a[<span class="number">0</span>]<span class="comment">//o</span></div><div class="line">b<span class="comment">// I Lddve you</span></div><div class="line">c<span class="comment">//3</span></div></pre></td></tr></table></figure></p>
 <p>substr() 提取字符 (从头部开始)<br>substring() 提取字符 (区间内,不包括结束位置字符)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'I Love you'</span>;</div><div class="line"><span class="keyword">var</span> a = str.substr(<span class="number">2</span>);</div><div class="line"><span class="keyword">var</span> b = str.substring(<span class="number">2</span>,<span class="number">5</span>);</div><div class="line">a<span class="comment">//love you</span></div><div class="line">b<span class="comment">//lov</span></div></pre></td></tr></table></figure></p>
@@ -444,7 +467,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -455,7 +478,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

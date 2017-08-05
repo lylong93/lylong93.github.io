@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="跨域是浏览器的限制（浏览器的同源策略），其实后端程序没有跨域的限制 JSONPjsonp： json padding就是将json数据添加到一个box中由于标签加载时并没有跨域的限制，所以将一段程序放入标签中，并提供回调函数来接受数据，将json数据接受到，即可对json数据进行解析使用。 代理开发中可以在服务器中设置一个代理，代理去访问其他端口的数据，在将数据返回到本端口，如vue-cli中设置">
+<meta name="description" content="跨域是浏览器的限制（浏览器的同源策略），其实后端程序没有跨域的限制 JSONPjsonp： json padding就是将json数据添加到一个box中由于标签加载时并没有跨域的限制，所以将一段程序放入标签中，并提供回调函数来接受数据，将json数据接受到，即可对json数据进行解析使用。 代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跨域">
 <meta property="og:url" content="http://yoursite.com/跨域/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="跨域是浏览器的限制（浏览器的同源策略），其实后端程序没有跨域的限制 JSONPjsonp： json padding就是将json数据添加到一个box中由于标签加载时并没有跨域的限制，所以将一段程序放入标签中，并提供回调函数来接受数据，将json数据接受到，即可对json数据进行解析使用。 代理开发中可以在服务器中设置一个代理，代理去访问其他端口的数据，在将数据返回到本端口，如vue-cli中设置">
-<meta property="og:updated_time" content="2017-08-02T09:59:36.361Z">
+<meta property="og:description" content="跨域是浏览器的限制（浏览器的同源策略），其实后端程序没有跨域的限制 JSONPjsonp： json padding就是将json数据添加到一个box中由于标签加载时并没有跨域的限制，所以将一段程序放入标签中，并提供回调函数来接受数据，将json数据接受到，即可对json数据进行解析使用。 代理">
+<meta property="og:updated_time" content="2017-08-05T15:05:34.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域">
-<meta name="twitter:description" content="跨域是浏览器的限制（浏览器的同源策略），其实后端程序没有跨域的限制 JSONPjsonp： json padding就是将json数据添加到一个box中由于标签加载时并没有跨域的限制，所以将一段程序放入标签中，并提供回调函数来接受数据，将json数据接受到，即可对json数据进行解析使用。 代理开发中可以在服务器中设置一个代理，代理去访问其他端口的数据，在将数据返回到本端口，如vue-cli中设置">
+<meta name="twitter:description" content="跨域是浏览器的限制（浏览器的同源策略），其实后端程序没有跨域的限制 JSONPjsonp： json padding就是将json数据添加到一个box中由于标签加载时并没有跨域的限制，所以将一段程序放入标签中，并提供回调函数来接受数据，将json数据接受到，即可对json数据进行解析使用。 代理">
 
 
 
@@ -295,6 +295,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深入js/" itemprop="url" rel="index">
+                    <span itemprop="name">深入js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -321,7 +343,8 @@
       
         <p>跨域是浏览器的限制（浏览器的同源策略），其实后端程序没有跨域的限制</p>
 <h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><p>jsonp： json padding<br>就是将json数据添加到一个box中<br>由于<stript>标签加载时并没有跨域的限制，所以将一段程序放入标签中，并提供回调函数来接受数据，将json数据接受到，即可对json数据进行解析使用。</stript></p>
-<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>开发中可以在服务器中设置一个代理，代理去访问其他端口的数据，在将数据返回到本端口，如vue-cli中设置代理: (/config/index.js)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">dev: &#123;</div><div class="line">    ....</div><div class="line">    ...</div><div class="line">    <span class="comment">//配置跨域代理</span></div><div class="line">    proxyTable: &#123;</div><div class="line">        <span class="string">'/xx'</span>: &#123;  <span class="comment">// 本地名称</span></div><div class="line">            target: <span class="string">"http://xxxxx"</span>,<span class="comment">//需要代理的地址</span></div><div class="line">            changeOrigin: <span class="literal">true</span>,</div><div class="line">            <span class="attr">pathRewrite</span>: &#123;</div><div class="line">                <span class="string">'^/xx'</span>: <span class="string">'/'</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
+<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><a id="more"></a>
+<p>开发中可以在服务器中设置一个代理，代理去访问其他端口的数据，在将数据返回到本端口，如vue-cli中设置代理: (/config/index.js)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">dev: &#123;</div><div class="line">    ....</div><div class="line">    ...</div><div class="line">    <span class="comment">//配置跨域代理</span></div><div class="line">    proxyTable: &#123;</div><div class="line">        <span class="string">'/xx'</span>: &#123;  <span class="comment">// 本地名称</span></div><div class="line">            target: <span class="string">"http://xxxxx"</span>,<span class="comment">//需要代理的地址</span></div><div class="line">            changeOrigin: <span class="literal">true</span>,</div><div class="line">            <span class="attr">pathRewrite</span>: &#123;</div><div class="line">                <span class="string">'^/xx'</span>: <span class="string">'/'</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div></pre></td></tr></table></figure></p>
 <h2 id="Allow-Control-Allow-Origin"><a href="#Allow-Control-Allow-Origin" class="headerlink" title="Allow-Control-Allow-Origin"></a>Allow-Control-Allow-Origin</h2><p>chrome浏览器的一个插件，可以关闭跨域的限制</p>
 
       
@@ -443,7 +466,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -454,7 +477,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

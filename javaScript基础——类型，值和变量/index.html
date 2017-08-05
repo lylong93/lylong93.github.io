@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/javaScript基础——类型，值和变量/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="值类型javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。 js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)    引用类型有：object(对象)，arry(数组)，function(函数) 当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。12">
-<meta property="og:updated_time" content="2017-07-31T07:19:17.414Z">
+<meta property="og:updated_time" content="2017-08-05T15:07:15.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javaScript基础——类型，值和变量">
 <meta name="twitter:description" content="值类型javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。 js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)    引用类型有：object(对象)，arry(数组)，function(函数) 当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。12">
@@ -307,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">javaScript</span>
+                  <a href="/categories/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
                   </a>
                 </span>
 
@@ -344,7 +344,9 @@
         <h2 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h2><p>javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。</p>
 <p>js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)<br>    引用类型有：object(对象)，arry(数组)，function(函数)</p>
 <p>当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line"><span class="comment">//改变b的值</span></div><div class="line">b = <span class="number">2</span> ;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//2</span></div></pre></td></tr></table></figure></p>
-<p>a和b独自占据空间，改变b并不会影响a。<br><a id="more"></a><br>当数据类型复杂时，需要占据大的空间，再进行复制赋值时，需要增加比较大的内存空间，所以将比较复杂的类型存放在堆中，而将地址放入栈中，通过引用而不是值来进行操作。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">name</span>:<span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = obj1;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj1);<span class="comment">//Object &#123;name: 1&#125;</span></div><div class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">//Object &#123;name: 1&#125;</span></div><div class="line"><span class="comment">//改变值</span></div><div class="line">obj2.name = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj1);<span class="comment">//Object &#123;name: 2&#125;</span></div><div class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">//Object &#123;name: 2&#125;</span></div></pre></td></tr></table></figure></p>
+<p>a和b独自占据空间，改变b并不会影响a。</p>
+<a id="more"></a>
+<p>当数据类型复杂时，需要占据大的空间，再进行复制赋值时，需要增加比较大的内存空间，所以将比较复杂的类型存放在堆中，而将地址放入栈中，通过引用而不是值来进行操作。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">name</span>:<span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = obj1;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj1);<span class="comment">//Object &#123;name: 1&#125;</span></div><div class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">//Object &#123;name: 1&#125;</span></div><div class="line"><span class="comment">//改变值</span></div><div class="line">obj2.name = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj1);<span class="comment">//Object &#123;name: 2&#125;</span></div><div class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">//Object &#123;name: 2&#125;</span></div></pre></td></tr></table></figure></p>
 <p>obj1和obj2其实指向一个对象，都可以影响堆中的对象。</p>
 <h3 id="undefined-和-null"><a href="#undefined-和-null" class="headerlink" title="undefined 和 null"></a>undefined 和 null</h3><p>undefined 为定义即为分配内存空间。<br>null 已经分配了内存空间，但未使用。可以定义一个对象为null，表示空。</p>
 <h2 id="typeof-和-instanceof-运算符"><a href="#typeof-和-instanceof-运算符" class="headerlink" title="typeof 和 instanceof 运算符"></a>typeof 和 instanceof 运算符</h2><p>typeof一元运算符返回操作类型的一个字符串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> (<span class="literal">undefined</span>) <span class="comment">//"undefined"</span></div><div class="line"><span class="keyword">typeof</span> (<span class="literal">null</span>) <span class="comment">// "object" 特殊</span></div><div class="line"><span class="keyword">typeof</span> (<span class="string">'123'</span>) <span class="comment">// "string"</span></div><div class="line"><span class="keyword">typeof</span> (<span class="number">123</span>) <span class="comment">// "number"</span></div><div class="line"><span class="keyword">typeof</span> (<span class="literal">true</span>) <span class="comment">// "boolean"</span></div><div class="line"></div><div class="line"><span class="keyword">typeof</span> (&#123;&#125;) <span class="comment">//"object"</span></div><div class="line"><span class="keyword">typeof</span> ([]) <span class="comment">//"object"</span></div><div class="line"><span class="keyword">typeof</span> (toString) <span class="comment">//"function"</span></div></pre></td></tr></table></figure></p>
@@ -394,18 +396,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/利用Hexo搭建博客/" rel="next" title="利用Hexo搭建博客">
-                <i class="fa fa-chevron-left"></i> 利用Hexo搭建博客
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/javaScript基础——Object/" rel="prev" title="javaScript基础——Object">
-                javaScript基础——Object <i class="fa fa-chevron-right"></i>
+              <a href="/利用Hexo搭建博客/" rel="prev" title="利用Hexo搭建博客">
+                利用Hexo搭建博客 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -478,7 +476,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -489,7 +487,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
