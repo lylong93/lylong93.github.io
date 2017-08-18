@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/DOM/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="实验了dom一些方法 DOM :Document Object ModelDOM是一种典型的树型结构 节点节点一般有三个属性：nodeName  节点名称nodeValue  节点值nodeType 节点类型对应的类型：元素节点1 属性节点 2文本节点3 注释8 文档9 整个文档就是一个文档节点">
-<meta property="og:updated_time" content="2017-08-06T08:56:59.120Z">
+<meta property="og:updated_time" content="2017-08-12T03:24:15.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM">
 <meta name="twitter:description" content="实验了dom一些方法 DOM :Document Object ModelDOM是一种典型的树型结构 节点节点一般有三个属性：nodeName  节点名称nodeValue  节点值nodeType 节点类型对应的类型：元素节点1 属性节点 2文本节点3 注释8 文档9 整个文档就是一个文档节点">
@@ -346,6 +346,7 @@
 <h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><p>节点一般有三个属性：<br>nodeName  节点名称<br>nodeValue  节点值<br>nodeType 节点类型<br>对应的类型：<br>元素节点1 属性节点 2文本节点3 注释8 文档9</p>
 <p>整个文档就是一个文档节点<br><a id="more"></a></p>
 <h2 id="操作节点"><a href="#操作节点" class="headerlink" title="操作节点"></a>操作节点</h2><p>document对象<br>document.activeElement();返回焦点元素</p>
+<p>document.createDocumentFragment(); 创建虚拟的片段<br>使用：如果创建多个子节点添加，过程非常缓慢，因为每添加一个节点都会调用父节点的appendChild()方法，为了解决这个问题，可以使用一个文档碎片，把所有的新节点附加其上，然后把文档碎片一次性添加到document中，优化页面。</p>
 <p>document.createElement(); 创建了元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>); </div><div class="line">a<span class="comment">//&lt;div&gt;&lt;/div&gt;</span></div></pre></td></tr></table></figure></p>
 <p>document.createTextNode();创建了文本<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createTextNode(<span class="string">'div'</span>); </div><div class="line">a<span class="comment">//"div"</span></div></pre></td></tr></table></figure></p>
 <p>document.getElementById(); 指定id的第一个元素<br>document.getElementsByClassName();//指定类名对象集合<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">"one"</span>&gt;&lt;/button&gt;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'one'</span>);</div><div class="line">a <span class="comment">// [div.one, div.one, button.one]</span></div></pre></td></tr></table></figure></p>
@@ -486,7 +487,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

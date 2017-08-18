@@ -253,6 +253,413 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vue-生命周期/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502022309751&di=e2d0514a9d6f46cc0ba0ff44bc7633cb&imgtype=0&src=http%3A%2F%2Fimg.smzy.com%2Fdown%2FUploadPic%2F2015-4%2F201541117114623782.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/vue-生命周期/" itemprop="url">vue-生命周期</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T00:00:00+08:00">
+                2017-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深入js/" itemprop="url" rel="index">
+                    <span itemprop="name">深入js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>beforeCreate ：数据还没有监听，没有绑定到vue对象实例，同时也没有挂载对象</p>
+<p>created ：数据已经绑定到了对象实例，但是还没有挂载对象</p>
+<p>beforeMount: 模板已经编译好了，根据数据和模板已经生成了对应的元素对象，将数据对象关联到了对象的 $el属性，$el属性是一个HTMLElement对象，也就是这个阶段，vue实例通过原生的createElement等方法来创建这个html片段，准备注入到我们vue实例指明的el属性所对应的挂载点</p>
+<p>mounted:将$el的内容挂载到了el，相当于我们在jquery执行了$(el).html($el),生成页面上真正的dom，上面我们就会发现dom的元素和我们$el的元素是一致的。在此之后，我们能够用方法来获取到el元素下的dom对象，并进 行各种操作</p>
+<p> beforeUpdate ：数据更新到dom之前，我们可以看到$el对象已经修改，但是我们页面上dom的数据还没有发生改变</p>
+<p>updated: dom结构会通过虚拟dom的原则，找到需要更新页面dom结构的最小路径，将改变更新到dom上面，完成更新<br>beforeDestroy,destroed :实例的销毁，vue实例还是存在的，只是解绑了事件的监听还有watcher对象数据与view的绑定，即数据驱动</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/节点操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502022309751&di=e2d0514a9d6f46cc0ba0ff44bc7633cb&imgtype=0&src=http%3A%2F%2Fimg.smzy.com%2Fdown%2FUploadPic%2F2015-4%2F201541117114623782.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/节点操作/" itemprop="url">节点操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T11:09:40+08:00">
+                2017-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/居中/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502022309751&di=e2d0514a9d6f46cc0ba0ff44bc7633cb&imgtype=0&src=http%3A%2F%2Fimg.smzy.com%2Fdown%2FUploadPic%2F2015-4%2F201541117114623782.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/居中/" itemprop="url">居中</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T10:28:35+08:00">
+                2017-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>单纯的水平居中使用margin：0 auto; 即可</p>
+<p>垂直居中<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">&lt;div class = "wrapper"&gt;</div><div class="line">  &lt;div class = "ins"&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;style type="text/css"&gt;</div><div class="line">  //定位居中</div><div class="line">  .wrapper &#123;</div><div class="line">            position: relative;</div><div class="line">            width: 500px;</div><div class="line">            height: 700px;</div><div class="line">            border:1px solid;</div><div class="line">        &#125;</div><div class="line">  .wrapper &gt; .one&#123;</div><div class="line">            width: 200px;</div><div class="line">            height: 100px;</div><div class="line">            background: red;</div><div class="line">            position:relative;</div><div class="line">            top: 50%;</div><div class="line">            left: 50%;</div><div class="line">            margin-top: -50px;</div><div class="line">            margin-left: -100px;</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">    //css居中1</div><div class="line">     .wrapper &#123;</div><div class="line">            position: relative;</div><div class="line">            width: 500px;</div><div class="line">            height: 700px;</div><div class="line">            border:1px solid;</div><div class="line">            display: flex;</div><div class="line">            align-items: center;//垂直居中</div><div class="line">            justify-content: center;//水平居中</div><div class="line">        &#125;</div><div class="line">      //css居中2</div><div class="line">        .wrapper &#123;</div><div class="line">            position: relative;</div><div class="line">            width: 500px;</div><div class="line">            height: 700px;</div><div class="line">            border:1px solid;</div><div class="line">            display: flex;</div><div class="line">        &#125;</div><div class="line">        .wrapper &gt; .one&#123;</div><div class="line">            width: 200px;</div><div class="line">            height: 100px;</div><div class="line">            background: red;</div><div class="line">            margin: auto;//上下垂直居中</div><div class="line">        &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/浮动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -347,8 +754,9 @@
 <h2 id="定位和浮动"><a href="#定位和浮动" class="headerlink" title="定位和浮动"></a>定位和浮动</h2><p>css 有三种基本的定位机制：普通流，浮动，绝对定位。<br>默认都存在普通流中，按照元素的规则去排布<br>一般使用定位指使用position属性, absolute fixed relavive static<br>static 默认正常<br>relavive 相对定位，相对现在位置定位<br>absolute 绝对定位，相对设置定位的父级元素定位，一直寻找到body元素，<br>          使用absolute会使元素脱离文档流<br>fixed 相对浏览器窗口定位</p>
 <p>浮动利用了float属性，达到更好的布局。使用float除了使元素脱离文档流，也产生了一些其他对兄弟元素的影响。</p>
 <h2 id="高度塌陷"><a href="#高度塌陷" class="headerlink" title="高度塌陷"></a>高度塌陷</h2><p>使用position：absolute或float属性脱离文档流就容易使父元素产生高度塌陷<br>解释：<br>在文档流中，父元素若不设置高度，其默认是被子元素撑开的。但是当子元素设置浮动之后，子元素会完全脱离文档流，此时将会导致子元素无法撑起父元素的高度，导致父元素的高度塌陷。</p>
-<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><h3 id="clear方法"><a href="#clear方法" class="headerlink" title="clear方法"></a>clear方法</h3><p>claer：both 意思四周是不允许有浮动的元素,原理就是用空白填满这一行达到占行<br>*1只对之前的元素生效 2对行内元素无效<br>但并未能解决父级元素塌陷<br>闭合浮动：<br>1.空div方法<br>加入一个空div<br>2.overflow 方法<br>3.使用 :after 伪元素的方法</p>
-<h2 id="user-agent-stylesheet"><a href="#user-agent-stylesheet" class="headerlink" title="user agent stylesheet"></a>user agent stylesheet</h2><p>就是浏览器对元素设置的默认样式<br>如 display: block 是浏览器赋予 div 的，存在于浏览器的 user agent stylesheet ，而不是 div 默认 display 的值就为 block ，在 W3C 中，所有的 HTML 标签 display 的默认值都为 inline 。</p>
+<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><h3 id="clear方法"><a href="#clear方法" class="headerlink" title="clear方法"></a>clear方法</h3><p>claer：both 意思四周是不允许有浮动的元素,原理就是用空白填满这一行达到占行<br>*1只对之前的元素生效 2对行内元素无效<br>但并未能解决父级元素塌陷</p>
+<h3 id="空div方法"><a href="#空div方法" class="headerlink" title="空div方法"></a>空div方法</h3><p>加入一个空div </p>
+<h3 id="overflow-方法"><a href="#overflow-方法" class="headerlink" title="overflow 方法"></a>overflow 方法</h3><h3 id="after-伪元素的方法"><a href="#after-伪元素的方法" class="headerlink" title=":after 伪元素的方法"></a>:after 伪元素的方法</h3><h2 id="user-agent-stylesheet"><a href="#user-agent-stylesheet" class="headerlink" title="user agent stylesheet"></a>user agent stylesheet</h2><p>就是浏览器对元素设置的默认样式<br>如 display: block 是浏览器赋予 div 的，存在于浏览器的 user agent stylesheet ，而不是 div 默认 display 的值就为 block ，在 W3C 中，所有的 HTML 标签 display 的默认值都为 inline 。</p>
 
           
         
@@ -490,8 +898,8 @@
 <p>img、input、textarea、select、object 都是替换元素，没有实际的内容(空元素)<br>其他大多数元素是不可替换元素，直接显示</p>
 <p><strong>替换元素，可以设定宽高，如img不设置宽高就默认使用图片的尺寸</strong></p>
 <h2 id="块级元素和行内元素"><a href="#块级元素和行内元素" class="headerlink" title="块级元素和行内元素"></a>块级元素和行内元素</h2><ol>
-<li>块级元素 独占一行</li>
-<li>行内元素 和其他行内元素共用一行，几乎所有的可替换元素都是行内元素</li>
+<li>块级元素 独占一行<br>如：div、ul、li、dl、dt、dd、p、h1-h6、blockquote</li>
+<li>行内元素 和其他行内元素共用一行，几乎所有的可替换元素都是行内元素<br>如：a、b、span、strong、label、button、textarea</li>
 </ol>
 
           
@@ -1210,423 +1618,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/视频播放网站制作整理（1）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502022309751&di=e2d0514a9d6f46cc0ba0ff44bc7633cb&imgtype=0&src=http%3A%2F%2Fimg.smzy.com%2Fdown%2FUploadPic%2F2015-4%2F201541117114623782.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/视频播放网站制作整理（1）/" itemprop="url">视频播放网站制作整理（1）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-03T00:00:00+08:00">
-                2017-06-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/实例/" itemprop="url" rel="index">
-                    <span itemprop="name">实例</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>记录视频网站制作过程</p>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>项目的目的是制作一个可互动式的教育网站，加强教学管理。</p>
-<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>管理员监听了视频播放的时间轴，并在指定时间轴内添加弹窗事件，<br>用户播放视频时指定时间触发事件，将信息记录数据库可供调用查看，</p>
-<h2 id="使用技术"><a href="#使用技术" class="headerlink" title="使用技术"></a>使用技术</h2><p>主要架构<br>node.js , mongodb , sass , jade<br>工程自动化<br>nodemon (自动重启node)<br>Browser-sync (浏览器热更新)<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/视频播放网站制作整理（1）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/视频播放网站制作整理（2）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502022309751&di=e2d0514a9d6f46cc0ba0ff44bc7633cb&imgtype=0&src=http%3A%2F%2Fimg.smzy.com%2Fdown%2FUploadPic%2F2015-4%2F201541117114623782.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/视频播放网站制作整理（2）/" itemprop="url">视频播放网站制作整理（2）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-03T00:00:00+08:00">
-                2017-06-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/实例/" itemprop="url" rel="index">
-                    <span itemprop="name">实例</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>详细实现</p>
-<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><p>上传模块使用multer插件，multer可配置上传的路径和上传文件的名称格式，在表单提交的路由中使用upload.fields可以获得上传文件(获得一个类json数据)的名称，将名称路径存入数据库。</p>
-<h2 id="监听管理"><a href="#监听管理" class="headerlink" title="监听管理"></a>监听管理</h2><p>使用了video库，js设置监听函数，开始播放时监听timeupdate事件，设置问题时点击可以调用暂定事件。每次点击添加，即在form表单中创建两个input放入文本和时间(隐藏起来)，提交经过路由存在数据库。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/视频播放网站制作整理（2）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/atom-使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502022309751&di=e2d0514a9d6f46cc0ba0ff44bc7633cb&imgtype=0&src=http%3A%2F%2Fimg.smzy.com%2Fdown%2FUploadPic%2F2015-4%2F201541117114623782.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/atom-使用/" itemprop="url">atom 使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-30T00:00:00+08:00">
-                2017-04-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://atom.io/" target="_blank" rel="external">Atom</a>,由github公司开源的编辑器，个人使用体会(与sublime text比较)，<br>优点：界面好看，可定制化高，插件丰富，设置方便<br>缺点：插件多了后启动严重占用内存，开启缓慢</p>
-<p>大体功能与sublime text相似，自身集成了包管理器，直接进入菜单下面的install功能页就能搜索需要的包。可显示包的一些信息，安装完成后，可以直接在管理器中可视化界面对每个插件进行设置。(sublime 需要设置代码)</p>
-<p>弃用….</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1676,7 +1667,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

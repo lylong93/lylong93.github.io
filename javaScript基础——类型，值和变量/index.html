@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="值类型javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。 js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)    引用类型有：object(对象)，arry(数组)，function(函数) 当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。12">
+<meta name="description" content="值类型javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。 js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)    引用类型有：object(对象)，arry(数组)，function(函数) 基本类型不是对象，拥有类似对象的方法是临时封装。当每定义一个原始类型时都是占据独立的内存空间,由于原始类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javaScript基础——类型，值和变量">
 <meta property="og:url" content="http://yoursite.com/javaScript基础——类型，值和变量/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="值类型javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。 js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)    引用类型有：object(对象)，arry(数组)，function(函数) 当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。12">
-<meta property="og:updated_time" content="2017-08-06T08:50:53.363Z">
+<meta property="og:description" content="值类型javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。 js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)    引用类型有：object(对象)，arry(数组)，function(函数) 基本类型不是对象，拥有类似对象的方法是临时封装。当每定义一个原始类型时都是占据独立的内存空间,由于原始类">
+<meta property="og:updated_time" content="2017-08-12T14:14:36.151Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javaScript基础——类型，值和变量">
-<meta name="twitter:description" content="值类型javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。 js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)    引用类型有：object(对象)，arry(数组)，function(函数) 当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。12">
+<meta name="twitter:description" content="值类型javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。 js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)    引用类型有：object(对象)，arry(数组)，function(函数) 基本类型不是对象，拥有类似对象的方法是临时封装。当每定义一个原始类型时都是占据独立的内存空间,由于原始类">
 
 
 
@@ -343,7 +343,7 @@
       
         <h2 id="值类型"><a href="#值类型" class="headerlink" title="值类型"></a>值类型</h2><p>javaScript分为两种类型的值：原始值（不可变的原始值），引用值（对象的引用）。</p>
 <p>js中原始类型有：undefined,null,boolean(布尔),number(数字),string(字符串)<br>    引用类型有：object(对象)，arry(数组)，function(函数)</p>
-<p>当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line"><span class="comment">//改变b的值</span></div><div class="line">b = <span class="number">2</span> ;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//2</span></div></pre></td></tr></table></figure></p>
+<p>基本类型不是对象，拥有类似对象的方法是临时封装。<br>当每定义一个原始类型时都是占据独立的内存空间,由于原始类型为简单的数据段，所以原始类型值存放入栈中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line"><span class="comment">//改变b的值</span></div><div class="line">b = <span class="number">2</span> ;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//2</span></div></pre></td></tr></table></figure></p>
 <p>a和b独自占据空间，改变b并不会影响a。</p>
 <a id="more"></a>
 <p>当数据类型复杂时，需要占据大的空间，再进行复制赋值时，需要增加比较大的内存空间，所以将比较复杂的类型存放在堆中，而将地址放入栈中，通过引用而不是值来进行操作。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">name</span>:<span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = obj1;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj1);<span class="comment">//Object &#123;name: 1&#125;</span></div><div class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">//Object &#123;name: 1&#125;</span></div><div class="line"><span class="comment">//改变值</span></div><div class="line">obj2.name = <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj1);<span class="comment">//Object &#123;name: 2&#125;</span></div><div class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">//Object &#123;name: 2&#125;</span></div></pre></td></tr></table></figure></p>
@@ -480,7 +480,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

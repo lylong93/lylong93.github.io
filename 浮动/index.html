@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/浮动/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="学习自 定位和浮动css 有三种基本的定位机制：普通流，浮动，绝对定位。默认都存在普通流中，按照元素的规则去排布一般使用定位指使用position属性, absolute fixed relavive staticstatic 默认正常relavive 相对定位，相对现在位置定位absolute 绝对定位，相对设置定位的父级元素定位，一直寻找到body元素，          使用absolute">
-<meta property="og:updated_time" content="2017-08-10T13:51:54.722Z">
+<meta property="og:updated_time" content="2017-08-12T02:10:27.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浮动">
 <meta name="twitter:description" content="学习自 定位和浮动css 有三种基本的定位机制：普通流，浮动，绝对定位。默认都存在普通流中，按照元素的规则去排布一般使用定位指使用position属性, absolute fixed relavive staticstatic 默认正常relavive 相对定位，相对现在位置定位absolute 绝对定位，相对设置定位的父级元素定位，一直寻找到body元素，          使用absolute">
@@ -345,8 +345,9 @@
 <h2 id="定位和浮动"><a href="#定位和浮动" class="headerlink" title="定位和浮动"></a>定位和浮动</h2><p>css 有三种基本的定位机制：普通流，浮动，绝对定位。<br>默认都存在普通流中，按照元素的规则去排布<br>一般使用定位指使用position属性, absolute fixed relavive static<br>static 默认正常<br>relavive 相对定位，相对现在位置定位<br>absolute 绝对定位，相对设置定位的父级元素定位，一直寻找到body元素，<br>          使用absolute会使元素脱离文档流<br>fixed 相对浏览器窗口定位</p>
 <p>浮动利用了float属性，达到更好的布局。使用float除了使元素脱离文档流，也产生了一些其他对兄弟元素的影响。</p>
 <h2 id="高度塌陷"><a href="#高度塌陷" class="headerlink" title="高度塌陷"></a>高度塌陷</h2><p>使用position：absolute或float属性脱离文档流就容易使父元素产生高度塌陷<br>解释：<br>在文档流中，父元素若不设置高度，其默认是被子元素撑开的。但是当子元素设置浮动之后，子元素会完全脱离文档流，此时将会导致子元素无法撑起父元素的高度，导致父元素的高度塌陷。</p>
-<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><h3 id="clear方法"><a href="#clear方法" class="headerlink" title="clear方法"></a>clear方法</h3><p>claer：both 意思四周是不允许有浮动的元素,原理就是用空白填满这一行达到占行<br>*1只对之前的元素生效 2对行内元素无效<br>但并未能解决父级元素塌陷<br>闭合浮动：<br>1.空div方法<br>加入一个空div<br>2.overflow 方法<br>3.使用 :after 伪元素的方法</p>
-<h2 id="user-agent-stylesheet"><a href="#user-agent-stylesheet" class="headerlink" title="user agent stylesheet"></a>user agent stylesheet</h2><p>就是浏览器对元素设置的默认样式<br>如 display: block 是浏览器赋予 div 的，存在于浏览器的 user agent stylesheet ，而不是 div 默认 display 的值就为 block ，在 W3C 中，所有的 HTML 标签 display 的默认值都为 inline 。</p>
+<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><h3 id="clear方法"><a href="#clear方法" class="headerlink" title="clear方法"></a>clear方法</h3><p>claer：both 意思四周是不允许有浮动的元素,原理就是用空白填满这一行达到占行<br>*1只对之前的元素生效 2对行内元素无效<br>但并未能解决父级元素塌陷</p>
+<h3 id="空div方法"><a href="#空div方法" class="headerlink" title="空div方法"></a>空div方法</h3><p>加入一个空div </p>
+<h3 id="overflow-方法"><a href="#overflow-方法" class="headerlink" title="overflow 方法"></a>overflow 方法</h3><h3 id="after-伪元素的方法"><a href="#after-伪元素的方法" class="headerlink" title=":after 伪元素的方法"></a>:after 伪元素的方法</h3><h2 id="user-agent-stylesheet"><a href="#user-agent-stylesheet" class="headerlink" title="user agent stylesheet"></a>user agent stylesheet</h2><p>就是浏览器对元素设置的默认样式<br>如 display: block 是浏览器赋予 div 的，存在于浏览器的 user agent stylesheet ，而不是 div 默认 display 的值就为 block ，在 W3C 中，所有的 HTML 标签 display 的默认值都为 inline 。</p>
 
       
     </div>
@@ -392,6 +393,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/居中/" rel="prev" title="居中">
+                居中 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -463,7 +468,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -511,7 +516,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定位和浮动"><span class="nav-number">1.</span> <span class="nav-text">定位和浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高度塌陷"><span class="nav-number">2.</span> <span class="nav-text">高度塌陷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清除浮动"><span class="nav-number">3.</span> <span class="nav-text">清除浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clear方法"><span class="nav-number">3.1.</span> <span class="nav-text">clear方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#user-agent-stylesheet"><span class="nav-number">4.</span> <span class="nav-text">user agent stylesheet</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定位和浮动"><span class="nav-number">1.</span> <span class="nav-text">定位和浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高度塌陷"><span class="nav-number">2.</span> <span class="nav-text">高度塌陷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清除浮动"><span class="nav-number">3.</span> <span class="nav-text">清除浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clear方法"><span class="nav-number">3.1.</span> <span class="nav-text">clear方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空div方法"><span class="nav-number">3.2.</span> <span class="nav-text">空div方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#overflow-方法"><span class="nav-number">3.3.</span> <span class="nav-text">overflow 方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#after-伪元素的方法"><span class="nav-number">3.4.</span> <span class="nav-text">:after 伪元素的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#user-agent-stylesheet"><span class="nav-number">4.</span> <span class="nav-text">user agent stylesheet</span></a></li></ol></div>
             
 
           </div>
