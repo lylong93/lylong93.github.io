@@ -253,141 +253,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/简单模板引擎/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yoghurt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502022309751&di=e2d0514a9d6f46cc0ba0ff44bc7633cb&imgtype=0&src=http%3A%2F%2Fimg.smzy.com%2Fdown%2FUploadPic%2F2015-4%2F201541117114623782.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/简单模板引擎/" itemprop="url">简单模板引擎</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T00:00:00+08:00">
-                2017-07-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/深入js/" itemprop="url" rel="index">
-                    <span itemprop="name">深入js</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>模板引擎的实现就是使用了字符串的replace方法<br>replace方法第三个参数可以是一个函数<br>(这个函数的具体参数确定依赖第一个参数是否是一个正则表达式对象， 以及这个正则表达式中指定了多少个括号子串)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> render = <span class="function"><span class="keyword">function</span>(<span class="params">tpl</span>)</span>&#123;</div><div class="line"> <span class="keyword">return</span> tpl.replace(<span class="regexp">/\((.*?)\)/g</span>,<span class="function"><span class="keyword">function</span>(<span class="params">m,value,index,g</span>)</span>&#123;</div><div class="line">   <span class="built_in">console</span>.log(m);<span class="comment">// (name), (time), (text)  正则匹配的字符串</span></div><div class="line">   <span class="built_in">console</span>.log(value);<span class="comment">// name, time, text  相对于&amp;1 ,&amp;2</span></div><div class="line">   <span class="built_in">console</span>.log(index);<span class="comment">//2, 13, 22   索引位置</span></div><div class="line">   <span class="built_in">console</span>.log(g);<span class="comment">//你好(name1),现在是(time),我说(text)...  原始字符串</span></div><div class="line"> &#125;)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = render(<span class="string">'你好(name1),现在是(time),我说(text)'</span>);</div></pre></td></tr></table></figure></p>
-<p>每次调用都会执行这个函数，可以将返回值替换<br>一个简单模板引擎：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> render = <span class="function"><span class="keyword">function</span>(<span class="params">tpl,data</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> tpl.replace(<span class="regexp">/\&#123;\&#123;(.+?)\&#125;\&#125;/g</span>,<span class="function"><span class="keyword">function</span>(<span class="params">m,m1</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(m);</div><div class="line">    <span class="keyword">return</span> data[m1]</div><div class="line">  &#125;)</div><div class="line"> &#125;</div><div class="line"><span class="keyword">var</span> a = render(<span class="string">'我是&#123;&#123;name&#125;&#125;，年龄&#123;&#123;age&#125;&#125;，性别&#123;&#123;sex&#125;&#125;'</span>,&#123;</div><div class="line">  <span class="attr">name</span>:<span class="string">'姓名'</span>,</div><div class="line">  <span class="attr">age</span>:<span class="number">18</span></div><div class="line"> &#125;);</div><div class="line">a<span class="comment">// 我是姓名，年龄18，性别undefinde</span></div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/视频播放网站制作整理（3）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1617,6 +1482,145 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/javaScript基础——原型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yoghurt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502022309751&di=e2d0514a9d6f46cc0ba0ff44bc7633cb&imgtype=0&src=http%3A%2F%2Fimg.smzy.com%2Fdown%2FUploadPic%2F2015-4%2F201541117114623782.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/javaScript基础——原型/" itemprop="url">javaScript基础——原型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T00:00:00+08:00">
+                2017-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深入js/" itemprop="url" rel="index">
+                    <span itemprop="name">深入js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>javaScript中所有常用的内置对象其实都是构造函数，undefined和null除外，他们是特殊的对象</p>
+<p>console.log(String); // function String() {}<br>console.log(Array);// function Array() {}<br>console.log(Function); //function Function() {}<br>console.log(undefined); // undefined<br>console.log(null); // object<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/javaScript基础——原型/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1666,7 +1670,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
